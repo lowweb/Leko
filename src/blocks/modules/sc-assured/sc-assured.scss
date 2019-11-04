@@ -1,0 +1,20 @@
+.sc-assured {
+
+	&__cap {
+		margin-bottom: 80px;
+	}
+
+	@include sm-block () {
+		&__cap {
+			margin-bottom: 40px;
+		}
+
+	}
+
+	@include xs-block () {
+		&__cap {
+			margin-bottom: 25px;
+		}
+
+	}
+}

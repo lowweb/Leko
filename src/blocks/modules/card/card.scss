@@ -1,0 +1,64 @@
+.card {
+	background-color: #FFFFFF;
+	border: 1px solid #D5D7E1;
+	box-sizing: border-box;
+	border-radius: 3px;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	@include fnt-fira (#373F51, 17px, 180%, normal);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: fit-content;
+	
+
+	&__tl {
+		font-weight: 500;
+		font-size: 25px;
+		line-height: 30px;
+		margin-bottom: 20px;
+	}
+
+	&__svg{
+		width: 24px;
+		height: 24px;
+		vertical-align: middle;
+		margin-right: 7px;
+	}
+
+	&__tx {
+		display: flex;
+		flex-direction: column;
+
+		&-itm {
+			margin-bottom: 16px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	@include sm-block () {
+		font-size: 16px;
+		line-height: 160%;
+	}
+	@include xs-block () {
+		padding-top: 16px;
+		padding-bottom: 20px;
+		margin-bottom: 24px;
+		padding-left: 16px;
+		align-items: flex-start;
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&__tl {
+			font-size: 18px;
+			line-height: 27px;
+		}
+
+		font-size: 15px;
+		line-height: 22px;
+	}
+}

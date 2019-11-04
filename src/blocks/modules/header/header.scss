@@ -1,0 +1,24 @@
+.hd {
+    padding-top: 24px;
+    padding-bottom: 16px;
+    @include row-flex();
+   &__logo {
+       @include col();
+
+
+       &-cap{
+            @include fnt-roboto ($clr-grey, 14px, 20px, normal);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+       }
+   }
+
+   &__contact {
+
+       @include row-flex();
+       margin-left: auto;
+
+   }
+
+   
+ }

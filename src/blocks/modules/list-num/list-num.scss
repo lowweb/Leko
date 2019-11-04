@@ -1,0 +1,63 @@
+.list-num {
+	@include fnt-fira (#373F51, 17px, 180%, normal);
+
+	list-style: none;
+	counter-reset: list-num-cnt;
+
+	&__itm {
+		position: relative;
+		counter-increment: list-num-cnt;
+		display: flex;
+		align-items: flex-start;
+		margin-bottom: 40px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:before {
+			content: counter(list-num-cnt);
+			font-family: Fira Sans;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 56px;
+			line-height: 56px;
+			/* identical to box height, or 100% */
+			letter-spacing: 0.01em;			
+			color: #5C2D91;
+			margin-right: 42px;
+			width: 26px;
+			flex: 0 0 auto;
+
+		}
+
+		& > span {
+			flex: 1;
+			border-left:4px solid #0073BE;
+			padding-left: 24px;
+		}
+		
+	}
+	@include sm-block () {
+		&__itm {
+			font-size: 16px;
+			line-height: 160%;
+			&:before { 
+				margin-right: 21px;
+			}
+
+			& > span { 
+				padding-left: 16px;
+			}
+		}
+	}
+	@include xs-block () {
+		&__itm {
+			font-size: 15px;
+			line-height: 22px;
+			&:before {
+				margin-right: 11px;
+				font-size: 40px;
+			}
+		}
+	}
+}

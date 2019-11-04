@@ -1,0 +1,57 @@
+.sc-consolid {
+	display: block;
+    position: relative;
+	padding: 80px 0px;
+
+	&__cap{
+		margin-bottom: 40px;
+	}
+
+	// &__scap {
+	// 	width: 862px;
+	// 	line-height: 180%;
+	// }
+
+	&__img {
+		@include col();
+        @include size(6);
+	}
+
+	&__inf {
+		@include col();
+        @include size(6);
+        & > ul {
+       			margin-bottom: 24px;
+       	}
+	}
+
+	& .sc-scap {
+		max-width: 862px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 40px;
+	}
+
+	@include sm-block () {
+
+	}
+
+	@include xs-block () {
+		& .sc-scap {
+			margin-bottom: 0;
+		}
+		&__cap{
+			margin-bottom: 24px;
+		}
+
+		&__img {
+       	 @include size(12);
+       	 margin-bottom: 24px;
+		}
+
+		&__inf {
+       		@include size(12);
+       		
+		}
+	}
+}

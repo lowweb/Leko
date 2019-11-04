@@ -1,0 +1,59 @@
+.sc-cap {
+	@include fnt-fira (#00171F, 48px, 58px, 500);
+	width: 100%;
+	// overflow: hidden;
+	display: inline-flex;
+	align-items: center;
+	@include sm-block () {
+		font-size: 36px;
+		line-height: 43px;
+	}
+	
+
+
+	& > span {
+		flex: 0 0 auto;
+		margin: 0px 24px;
+	}
+
+	&:before,&:after {
+		content: "";
+		height: 2px;
+		flex: 1 0 auto;
+		vertical-align: middle;
+		background-color: #D5D7E1;
+		display: inline-block;
+	}
+
+	@include xs-block () {
+		font-size: 24px;
+		line-height: 29px;
+
+		&:before, &:after {
+            content: none;
+        }
+
+
+		& > span {
+			text-align: center;
+    		flex: 1;
+		}
+	}
+	
+}
+
+.sc-scap {
+	@include fnt-fira (#00171F, 32px, 44px, 300);
+	
+	&--180 {
+		line-height: 180%;
+	}
+	@include sm-block () {
+		font-size: 24px;
+		line-height: 32px;
+	}
+	@include xs-block () {
+		font-size: 18px;
+		line-height: 27px;
+	}
+} 

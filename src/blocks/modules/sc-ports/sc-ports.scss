@@ -1,0 +1,120 @@
+.sc-ports {
+   	// height: 596px;
+   	background-image: url(#{$imgFolder}ports.jpg);
+    background-size: cover;
+    display: block;
+    position: relative;
+    padding: 80px 0px; 
+
+    &__cap {
+        margin-bottom: 56px;
+    }
+    &__cap > span {
+    	max-width: 639px;
+
+    }
+	&__itm {
+		justify-content: center;
+		align-content: space-between;
+		 min-height: 146px;
+	}
+    &__name {
+    	@include col();
+    	@include size (4);
+    	display: flex;
+    	justify-content: center;
+    	@include fnt-fira (#ffffff, 25px, 30px, normal);
+    	letter-spacing: 0.01em;
+
+    	&-cap {
+    		max-width: 224px;
+    	}
+
+    	&:before {
+    		content: url(#{$imgFolder}icn-port-mark.png);
+    		width: 20px;
+    		height: 20px;
+    		margin-right: 18px;
+    	}
+    }
+
+    &__rem {
+    	color:#ffffff;
+    	text-align: center;
+    	margin-bottom: 56px;
+    	@include col();
+    	@include size(12);
+    	max-width: 685px;
+
+    }
+
+    @include sm-block () {
+        background-image: url(#{$imgFolder}ports--t.jpg);
+        padding: 56px 0;
+            &__cap {
+                margin-bottom: 40px;
+                font-size: 36px;
+                line-height: 43px;
+            }
+            &__rem {
+                margin-bottom: 40px;
+            }
+
+            &__name {
+                  @include col();
+                  @include size (12);
+                  justify-content: flex-start;
+                  margin-bottom: 20px;
+                  &:last-child {
+                    margin-bottom: 0;
+                  }
+
+                  &-cap {
+                    max-width: none;
+                  }
+            }
+
+            &__cap > span {
+                max-width: 480px;       
+
+            }
+
+            &__itm {
+                max-width: 70%;
+            }
+        }
+        @include xs-block () {
+            padding: 40px 0;
+
+            &__cap {
+                margin-bottom: 24px;
+                font-size: 24px;
+                line-height: 29px;
+                &:before, &:after {
+                    content: none;
+                }
+            }
+
+            &__cap > span {
+                width: 100%;
+                max-width: none;
+                margin: 0 auto;
+            }
+            &__rem {
+                margin-bottom: 24px;
+                font-size: 15px;
+                line-height: 22px;
+            }
+
+            &__itm {
+                max-width: 100%;
+                justify-content: flex-start;
+            }
+
+            &__name {
+                font-size: 18px;
+                line-height: 27px;
+            }
+            
+        }
+}

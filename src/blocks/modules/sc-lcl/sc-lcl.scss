@@ -1,0 +1,57 @@
+.sc-lcl {
+	padding: 80px 0px;
+	background-image: url(#{$imgFolder}img-lcl.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+  background-position: 50% 50%;
+  
+  &__cap {
+    margin-bottom: 40px;
+  }
+
+  &__scap {
+    margin-bottom: 40px;
+  }
+
+  &__tx {
+    margin-bottom: 40px;
+  }
+
+  	& .sg__itm ul {
+		@include col();
+        @include size(6);
+  	}
+
+    @include sm-block () {
+      background-image: url(#{$imgFolder}img-lcl--t.jpg);
+      &__scap {
+        font-size: 24px;
+        line-height: 32px
+      }
+
+      &__tx {
+        font-size: 16px;
+        line-height: 160%;
+      }
+    }
+
+    @include xs-block () {
+
+      &__scap {
+         margin-bottom: 24px;
+         font-size: 18px;
+         line-height: 27px;
+      }
+
+      &__tx {
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 24px;
+      }
+
+      & .sg__itm ul {
+        @include size(12);
+      }
+
+    }
+}

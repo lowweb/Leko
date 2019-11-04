@@ -1,0 +1,28 @@
+.list-icn {
+	@include fnt-lucida (#373F51,17px,140%,normal);
+		min-height: 80px;
+		padding: 16px 0;
+		border-bottom: 1px dashed #B4B8C5;
+		display: flex;
+		align-items: center;
+
+		&:last-child {
+			border-bottom: none;	
+		}
+
+		& > img {
+			margin-right: 15px;
+		}
+
+		&__svg {
+			width: 48px;
+			height: 48px;
+			min-width: 48px;
+			margin-right: 15px;
+		}
+
+		@include xs-block () {
+			font-size: 15px;
+			line-height: 140%;
+		}
+}

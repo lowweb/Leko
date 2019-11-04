@@ -1,0 +1,123 @@
+.sc-inter {
+	background-image: url(#{$imgFolder}img-inter-back.png);
+    background-size: 1440px 570px;
+	background-repeat: no-repeat;
+	background-position: 0px 178px;
+	&__inf {
+		// height: 801px;
+		padding: 80px 0 0px 0;
+		&-cap {
+			margin-bottom: 80px;
+		}
+
+	}
+	&__ocean-fr {
+		@include col();
+        @include size(5);
+	}
+
+	&__advant {
+		@include col();
+        @include size(5.3);
+	}
+
+	&__check-blk {
+		background-color: #F3F3F3;
+		padding: 56px 0 80px 0;
+	}
+
+	&__check-itm {
+		@include col();
+        @include size(4);
+	}
+
+	&__list-cap {
+		margin-bottom: 24px;
+	}
+
+	&__tx{
+		margin-top: 40px;
+		margin-bottom: 46px;
+	}
+
+	@media only screen and (max-width: 1020px) {
+           &__inf {
+			&-cap > span {
+				max-width: 421px;
+				text-align: center;
+				font-size: 36px;
+				line-height: 43px;
+			}
+		}
+       }
+	@include sm-block () {
+		&__inf {
+			padding: 56px 0 0 0;
+			&-cap {
+				margin-bottom: 52px;
+			}
+		}
+
+		&__ocean-fr {	
+       	 	@include size(6);
+		}
+
+		&__advant {
+			
+       	 	@include size(6);
+		}
+		&__tx {
+			margin-bottom: 40px;
+		}
+
+		&__check-itm {
+       		@include size(12);
+       		margin-bottom: 24px;
+       		&:last-child {
+       			margin-bottom: 0;
+       		}
+		}
+		&__check-blk {
+			padding: 40px 0;
+		}
+	}
+
+	@include xs-block () {
+		background-image: url(#{$imgFolder}img-inter-back--t.png);
+		&__inf {
+			padding: 40px 0 0 0;
+			&-cap {
+				margin-bottom: 40px;
+				& > span {
+					max-width: none;
+				}
+			}
+		}
+		&__ocean-fr {	
+       	 	@include size(12);
+       	 	margin-bottom: 24px;
+		}
+
+		&__advant {
+			
+       	 	@include size(12);
+		}
+
+		&__list-cap {
+			font-size: 18px;
+			line-height: 27px;
+			margin-bottom: 8px;
+		}
+
+		&__tx {
+			font-size: 15px;
+			line-height: 22px;
+			margin-bottom: 24px;
+		}
+		&__check-itm {
+			margin-bottom: 16px;
+			font-size: 15px;
+			line-height: 22px;
+		}
+	}
+}

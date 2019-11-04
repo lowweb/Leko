@@ -1,0 +1,21 @@
+.check-inf {
+	@include fnt-lucida (#373F51, 16px, 24px, normal);
+        display: flex;
+		&:before {
+			content: '';
+			background-image: url(#{$imgFolder}info-chk.png);
+			background-size: cover;
+			width: 40px;
+			height: 40px;
+			margin-right: 16px;
+			min-width: 40px;
+		}
+		
+		@include xs-block () {
+		    &:before {
+		    	width: 28px;
+				height: 28px;
+				min-width: 28px;
+		    }
+		};
+}

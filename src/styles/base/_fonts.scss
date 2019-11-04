@@ -1,0 +1,54 @@
+
+
+@mixin fnt-roboto ($color, $size, $height, $weight) {
+	font-family: 'Roboto', sans-serif;
+	line-height: $height;
+	font-weight: $weight;
+	font-size: $size;
+	color: $color;
+	font-style: normal;
+}
+
+
+@mixin fnt-roboto-c ($color, $size, $height, $weight) {
+	font-family: 'Roboto Condensed', sans-serif;
+	line-height: $height;
+	font-weight: $weight;
+	font-size: $size;
+	color: $color;
+	font-style: normal;
+}
+
+
+// .fnt-fr--3244 {
+// 	@include fnt-fira (#00171F, 32px, 44px, 300);
+// }
+
+// .fnt-fr--2530 {
+// 	@include fnt-fira (#373F51, 25px, 30px, 500);
+// 	letter-spacing: 0.01em;
+// }
+// .fnt-fr--3643 {
+// 	@include fnt-fira (#00171F, 36px, 43px, 300);
+// }
+
+// .fnt-lc--17 {
+// 	@include fnt-lucida (#373F51, 17px, 180%, normal);
+// }
+// .ftn-lc--1421 {
+// 	@include fnt-lucida (rgba(55, 63, 81, 0.7), 14px, 21px, normal);
+
+// }
+// .fnt-lc--1624 {
+// 	@include fnt-lucida (#373F51, 16px, 24px, normal);
+// }
+
+// .fnt--bld {
+// 	font-weight: 500;
+// }
+// .fnt--wh {
+// 	color: #ffffff;
+// }
+// .fnt--c {
+// 	text-align: center;
+// }
