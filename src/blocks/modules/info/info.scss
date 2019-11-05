@@ -1,0 +1,21 @@
+.info {
+    background-color: #ffffff;
+
+    &  .wrap {
+        padding: 56px 50px 80px 50px;
+        @include fnt-roboto-c ($clr-dark-grey, 17px, 29px, normal);
+    }
+
+    &__cap {
+        @include fnt-roboto-c ($clr-dark-grey, 32px, 37px, bold);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+    }
+    &__text-block {
+        margin-bottom: 16px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,14 +1,13 @@
-footer {
+.footer {
+	@include fnt-roboto ($clr-white, 16px, 19px, normal); 
 	height: 56px;
-	font-family: Lucida Grande;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 13px;
-	line-height: 15px;
-	color: #FFFFFF;
+	padding: 19px 156px 18px 156px;
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	background-color: #373F51;
+	background-color: #3D4855;
+
+	&__rg {
+		margin-left: auto;
+	}
 
 }

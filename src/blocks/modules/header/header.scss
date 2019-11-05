@@ -1,11 +1,9 @@
 .hd {
-    padding-top: 24px;
-    padding-bottom: 16px;
     @include row-flex();
    &__logo {
-       @include col();
-
-
+        margin: 24px 0 16px 0;
+        @include col();
+        @include size(4);
        &-cap{
             @include fnt-roboto ($clr-grey, 14px, 20px, normal);
             letter-spacing: 0.04em;
@@ -14,9 +12,35 @@
    }
 
    &__contact {
+        display: flex;
+        @include col();
+        @include size(8);
 
-       @include row-flex();
-       margin-left: auto;
+       &-tel {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        @include fnt-roboto ($clr-blck, 18px, 20px, 500);
+        margin-right: 40px;
+
+        & > a {
+            color: $clr-blck;
+        }
+        &:before {
+            content: url('../img/icn-phone.png'); 
+        }
+       }
+       &-mail {
+        display: flex;
+        align-items: center;
+        @include fnt-roboto ($clr-lnk, 16px, 20px, normal); 
+        & > a {
+            
+        }
+        &:before {
+            content: url('../img/icn-mail.png');
+        }
+       }
 
    }
 

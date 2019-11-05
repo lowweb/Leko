@@ -91,5 +91,18 @@ a {
 	flex-wrap: wrap;
 }
 
+
+.fx__al-cnt {
+	display: flex;
+	align-items: center;
+}
 .grecaptcha-badge { visibility: hidden; }
 
+.wrap {
+	max-width: 1128px;
+    margin: 0 auto;
+    // padding-left: 30px;
+    // padding-right: 30px;
+	width: 100%;
+	height: 100%;
+}

@@ -1,0 +1,18 @@
+.btn {
+    border: none;
+    cursor: pointer;
+    @include fnt-roboto-c ($clr-white, 18px, 21px, normal);
+    padding: 11px 24px 12px 24px;
+
+
+    &--red {
+        background-color: $clr-red;
+        &:hover {
+            background-color: $clr-red-dark; 
+        }
+       
+        &:active {
+            background-color: $clr-red;
+        }
+    }
+}
