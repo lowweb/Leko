@@ -1,0 +1,46 @@
+.tabmenu {
+    background: url('../img/img-back-tab.png');
+    background-position: center;
+    background-size: cover;
+    height: 124px;
+    position: relative;
+    padding-top: 24px;
+
+    &__cap {
+        @include fnt-roboto-c ($clr-white, 32px, 36px, bold);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+    &__items {
+        display: flex;
+    }
+
+    &__item {
+        @include fnt-roboto-c ($clr-lnk, 19px, 24px, normal);
+        padding: 14px 16px 10px 16px;
+        background-color: #ECEDEE;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        margin-right: 16px; 
+        cursor: pointer;
+
+        &:hover {
+            color: $clr-lnk--h;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--active {
+            color: #333333;
+            cursor: default;
+            background-color: $clr-white;
+
+            &:hover {
+                color: inherit;
+            }
+        }
+    }
+}

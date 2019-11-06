@@ -1,0 +1,50 @@
+.contract-menu {
+    &__items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        padding: 8px 14px 8px 16px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+
+        &--active {
+            background-color: #ECEDEE; 
+            border-left: 2px solid $clr-red;
+
+            & .contract-menu__cap {
+                color: #333333;
+                border-bottom: none;
+                cursor: default;
+            }
+        }
+    }
+
+    &__cap {
+        @include fnt-roboto-c ($clr-lnk, 19px, 32px, normal);
+        margin-bottom: 8px;
+    }
+
+    &__dwnl {
+        
+        display: flex;
+        align-items: center;
+        
+        &:before {
+            content: url('../img/icn-download.png');
+            height: 24px;
+            width: 24px;
+            margin-right: 8px;;
+        }
+        
+    
+    }
+
+    &__file {
+        @include fnt-roboto ($clr-grey-icn, 15px, 22px, normal);
+        display: flex;
+        flex-direction: column;
+    }
+}

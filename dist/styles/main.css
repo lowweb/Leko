@@ -393,7 +393,8 @@ input {
 
 a {
   color: #1989DB;
-  fill: #1989DB; }
+  fill: #1989DB;
+  cursor: pointer; }
   a:hover {
     color: #DE1832;
     fill: #DE1832; }
@@ -418,11 +419,31 @@ a {
 .grecaptcha-badge {
   visibility: hidden; }
 
-.wrap {
-  max-width: 1128px;
-  margin: 0 auto;
-  width: 100%;
-  height: 100%; }
+.app-dash-lnk {
+  color: #1989DB;
+  fill: #1989DB;
+  border-bottom: 1px dashed #1989DB;
+  cursor: pointer; }
+  .app-dash-lnk:hover {
+    color: #DE1832;
+    fill: #DE1832;
+    border-bottom: 1px dashed #DE1832; }
+  .app-dash-lnk > svg {
+    vertical-align: middle; }
+  .app-dash-lnk > svg, .app-dash-lnk > svg path {
+    fill: inherit; }
+
+.app-lnk {
+  color: #1989DB;
+  fill: #1989DB;
+  cursor: pointer; }
+  .app-lnk:hover {
+    color: #DE1832;
+    fill: #DE1832; }
+  .app-lnk > svg {
+    vertical-align: middle; }
+  .app-lnk > svg, .app-lnk > svg path {
+    fill: inherit; }
 
 .footer {
   font-family: 'Roboto', sans-serif;
@@ -530,6 +551,7 @@ a {
 
 .about {
   background: url("../img/img-back.png");
+  background-size: cover;
   background-position: center;
   height: 480px;
   position: relative; }
@@ -685,5 +707,123 @@ a {
     justify-content: center; }
   .contacts .col {
     width: calc(83.33333% - 24px); }
+
+.tabmenu {
+  background: url("../img/img-back-tab.png");
+  background-position: center;
+  background-size: cover;
+  height: 124px;
+  position: relative;
+  padding-top: 24px; }
+  .tabmenu__cap {
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 36px;
+    font-weight: bold;
+    font-size: 32px;
+    color: #ffffff;
+    font-style: normal;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 16px; }
+  .tabmenu__items {
+    display: flex; }
+  .tabmenu__item {
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 24px;
+    font-weight: normal;
+    font-size: 19px;
+    color: #1989DB;
+    font-style: normal;
+    padding: 14px 16px 10px 16px;
+    background-color: #ECEDEE;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-right: 16px;
+    cursor: pointer; }
+    .tabmenu__item:hover {
+      color: #DE1832; }
+    .tabmenu__item:last-child {
+      margin-right: 0; }
+    .tabmenu__item--active {
+      color: #333333;
+      cursor: default;
+      background-color: #ffffff; }
+      .tabmenu__item--active:hover {
+        color: inherit; }
+
+.contract {
+  padding: 40px 0 128px 0;
+  background-color: #ffffff; }
+  .contract__menu {
+    box-sizing: border-box;
+    word-wrap: break-word;
+    margin-left: 12px;
+    margin-right: 12px;
+    width: calc(25% - 24px); }
+  .contract__text {
+    box-sizing: border-box;
+    word-wrap: break-word;
+    margin-left: 12px;
+    margin-right: 12px;
+    width: calc(75% - 24px);
+    font-family: 'Roboto', sans-serif;
+    line-height: 24px;
+    font-weight: normal;
+    font-size: 15px;
+    color: #333333;
+    font-style: normal; }
+    .contract__text-cap {
+      font-family: 'Roboto Condensed', sans-serif;
+      line-height: 37px;
+      font-weight: normal;
+      font-size: 32px;
+      color: #1D2228;
+      font-style: normal;
+      margin-bottom: 16px; }
+
+.contract-menu__items {
+  display: flex;
+  flex-direction: column; }
+
+.contract-menu__item {
+  padding: 8px 14px 8px 16px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column; }
+  .contract-menu__item--active {
+    background-color: #ECEDEE;
+    border-left: 2px solid #DE1832; }
+    .contract-menu__item--active .contract-menu__cap {
+      color: #333333;
+      border-bottom: none;
+      cursor: default; }
+
+.contract-menu__cap {
+  font-family: 'Roboto Condensed', sans-serif;
+  line-height: 32px;
+  font-weight: normal;
+  font-size: 19px;
+  color: #1989DB;
+  font-style: normal;
+  margin-bottom: 8px; }
+
+.contract-menu__dwnl {
+  display: flex;
+  align-items: center; }
+  .contract-menu__dwnl:before {
+    content: url("../img/icn-download.png");
+    height: 24px;
+    width: 24px;
+    margin-right: 8px; }
+
+.contract-menu__file {
+  font-family: 'Roboto', sans-serif;
+  line-height: 22px;
+  font-weight: normal;
+  font-size: 15px;
+  color: #A0A3A5;
+  font-style: normal;
+  display: flex;
+  flex-direction: column; }
 
 /*# sourceMappingURL=maps/main.css.map */

@@ -10,22 +10,6 @@ h1, h2, h3, h4, h5, h6, ul {
 	z-index: 99;
 }
 
-// .sg-wrp {
-// 	@include wrapper ();
-// 	// width: 100%;
-// }
-// .sg__itm{
-//     	@include row-flex ();
-// }
-
-// .sg__itm--jc-cnt {
-// 	justify-content: center;
-// }
-
-// .sg__itm--al-cnt {
-// 	align-items: center;
-// }
-
 .wrapper  {
 	@include wrapper ();
 }
@@ -76,6 +60,7 @@ body {
 a {
 	color: $clr-lnk;
 	fill: $clr-lnk;
+	cursor: pointer;
 	&:hover{
 		color: $clr-lnk--h;
 		fill: $clr-lnk--h;
@@ -107,11 +92,38 @@ a {
 }
 .grecaptcha-badge { visibility: hidden; }
 
-.wrap {
-	max-width: 1128px;
-    margin: 0 auto;
-    // padding-left: 30px;
-    // padding-right: 30px;
-	width: 100%;
-	height: 100%;
+
+
+.app-dash-lnk {
+	color: $clr-lnk;
+	fill: $clr-lnk;;
+	border-bottom: 1px dashed $clr-lnk;
+	cursor: pointer;
+	&:hover {
+		color: $clr-lnk--h;
+		fill: $clr-lnk--h;
+		border-bottom: 1px dashed $clr-lnk--h;
+	}
+	& > svg {
+		vertical-align: middle;
+	}
+	& > svg, & > svg path{
+			fill: inherit;
+	}
+}
+
+.app-lnk {
+	color: $clr-lnk;
+	fill: $clr-lnk;;
+	cursor: pointer;
+	&:hover {
+		color: $clr-lnk--h;
+		fill: $clr-lnk--h;
+	}
+	& > svg {
+		vertical-align: middle;
+	}
+	& > svg, & > svg path{
+			fill: inherit;
+	}
 }
