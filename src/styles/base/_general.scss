@@ -3,29 +3,38 @@ h1, h2, h3, h4, h5, h6, ul {
     padding: 0;
 }
 
-@include reset();
+// @include reset();
 
-// .debugGrid {
-// 	@include debug(rgba(0,0,0,0.4),1px solid yellow);
-// 	z-index: 99;
+.debugGrid {
+	@include debug(rgba(0,0,0,0.4),1px solid yellow);
+	z-index: 99;
+}
+
+// .sg-wrp {
+// 	@include wrapper ();
+// 	// width: 100%;
+// }
+// .sg__itm{
+//     	@include row-flex ();
 // }
 
-.sg-wrp {
+// .sg__itm--jc-cnt {
+// 	justify-content: center;
+// }
+
+// .sg__itm--al-cnt {
+// 	align-items: center;
+// }
+
+.wrapper  {
 	@include wrapper ();
-	width: 100%;
 }
-.sg__itm{
-    	@include row-flex ();
+.row-f {
+	@include row-flex ();
 }
-
-.sg__itm--jc-cnt {
-	justify-content: center;
+.col {
+	@include col ();
 }
-
-.sg__itm--al-cnt {
-	align-items: center;
-}
-
 
 * {
 	margin: 0;

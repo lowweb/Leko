@@ -1,13 +1,25 @@
 .footer {
 	@include fnt-roboto ($clr-white, 16px, 19px, normal); 
 	height: 56px;
-	padding: 19px 156px 18px 156px;
-	display: flex;
-	align-items: center;
+	padding: 19px 0px 18px 0px;
+	// display: flex;
+	// align-items: center;
 	background-color: #3D4855;
 
 	&__rg {
 		margin-left: auto;
+	}
+	& .wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	& a {
+		color: $clr-white;
+
+		&:hover {
+			opacity: 0.6;
+		}
 	}
 
 }

@@ -1,9 +1,16 @@
 .info {
     background-color: #ffffff;
 
-    &  .wrap {
+    &  .wrapper {
         padding: 56px 50px 80px 50px;
         @include fnt-roboto-c ($clr-dark-grey, 17px, 29px, normal);
+    }
+
+    & .row-f {
+        justify-content: center;
+    }
+    & .col {
+        @include size (10.3);
     }
 
     &__cap {
