@@ -16,7 +16,7 @@
             content: url('../img/icn-enter.png'); 
         }
     }
-    & ul > li {
+    & ul > li > a{
         @include fnt-roboto-c ($clr-white, 18px, 24px, normal);
         height: 100%;
         display: flex;
