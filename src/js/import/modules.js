@@ -1,5 +1,3 @@
-// import "%modules%/header/header";
-// import "%modules%/ham/ham";
-// import "%modules%/map/map";
-// import "%modules%/sc-main/sc-main"
-// import "%modules%/sclr-anch/sclr-anch"
+import "%modules%/tabmenu/tabmenu";
+import "%modules%/contract-menu/contract-menu";
+import "%modules%/btn/btn";

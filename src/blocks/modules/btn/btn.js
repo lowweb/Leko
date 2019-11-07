@@ -1,13 +1,3 @@
-modules.define('btn', ['i-bem-dom'], function(provide, bemDom) {
-
-provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-        js: {
-            inited: function() {
-                
-            }
-        }
-    }
-}));
-
-});
+document.getElementById("btn-scroll").onclick = function() {
+	document.getElementById('about').scrollIntoView({block: 'start',behavior: 'smooth' });
+};

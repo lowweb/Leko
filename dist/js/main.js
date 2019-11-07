@@ -86,18 +86,100 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/blocks/modules/btn/btn.js":
+/*!***************************************!*\
+  !*** ./src/blocks/modules/btn/btn.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.getElementById("btn-scroll").onclick = function () {
+  document.getElementById('about').scrollIntoView({
+    block: 'start',
+    behavior: 'smooth'
+  });
+};
+
+/***/ }),
+
+/***/ "./src/blocks/modules/contract-menu/contract-menu.js":
+/*!***********************************************************!*\
+  !*** ./src/blocks/modules/contract-menu/contract-menu.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var itemMenuContr = document.querySelectorAll(".contract-menu__cap a");
+console.log(itemMenuContr);
+
+for (var i = 0; i < itemMenuContr.length; i++) {
+  itemMenuContr[i].addEventListener('click', function (event) {
+    event.preventDefault();
+    clickMenuContr(this);
+  });
+}
+
+function clickMenuContr(el) {
+  var items = document.querySelectorAll(".contract-menu__item");
+
+  for (var i = 0; i < items.length; i++) {
+    items[i].classList.remove("contract-menu__item--active");
+  }
+
+  el.parentElement.parentElement.classList.add("contract-menu__item--active");
+}
+
+;
+
+/***/ }),
+
+/***/ "./src/blocks/modules/tabmenu/tabmenu.js":
+/*!***********************************************!*\
+  !*** ./src/blocks/modules/tabmenu/tabmenu.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var tabitem = document.querySelectorAll(".tabmenu__item");
+
+for (var i = 0; i < tabitem.length; i++) {
+  tabitem[i].addEventListener('click', function (event) {
+    clickTab(this);
+  });
+}
+
+function clickTab(el) {
+  var items = document.querySelectorAll(".tabmenu__item");
+
+  for (var i = 0; i < items.length; i++) {
+    items[i].classList.remove("tabmenu__item--active");
+  }
+
+  el.classList.add("tabmenu__item--active");
+}
+
+;
+
+/***/ }),
+
 /***/ "./src/js/import/modules.js":
 /*!**********************************!*\
   !*** ./src/js/import/modules.js ***!
   \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// import "%modules%/header/header";
-// import "%modules%/ham/ham";
-// import "%modules%/map/map";
-// import "%modules%/sc-main/sc-main"
-// import "%modules%/sclr-anch/sclr-anch"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_tabmenu_tabmenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/tabmenu/tabmenu */ "./src/blocks/modules/tabmenu/tabmenu.js");
+/* harmony import */ var _modules_tabmenu_tabmenu__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_tabmenu_tabmenu__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modules_contract_menu_contract_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/contract-menu/contract-menu */ "./src/blocks/modules/contract-menu/contract-menu.js");
+/* harmony import */ var _modules_contract_menu_contract_menu__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_contract_menu_contract_menu__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_btn_btn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/btn/btn */ "./src/blocks/modules/btn/btn.js");
+/* harmony import */ var _modules_btn_btn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_btn_btn__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
 
 /***/ }),
 
@@ -111,7 +193,6 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _import_modules_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./import/modules.js */ "./src/js/import/modules.js");
-/* harmony import */ var _import_modules_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_import_modules_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _svguse_min_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./svguse.min.js */ "./src/js/svguse.min.js");
 /* harmony import */ var _svguse_min_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_svguse_min_js__WEBPACK_IMPORTED_MODULE_1__);
 

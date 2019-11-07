@@ -15,4 +15,17 @@
             background-color: $clr-red;
         }
     }
+
+    &--scroll {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor:pointer;
+        & > img {
+        transition-duration: 0.3s;
+        }
+        &:hover > img {
+            transform: translate(0px, 5px);
+        }
+    }
 }

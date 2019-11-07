@@ -583,6 +583,11 @@ a {
     position: absolute;
     right: 0;
     bottom: 0; }
+  .about__btn {
+    display: flex;
+    align-items: center; }
+    .about__btn > button {
+      margin-right: 40px; }
 
 .btn {
   border: none;
@@ -600,6 +605,15 @@ a {
       background-color: #BE2136; }
     .btn--red:active {
       background-color: #DE1832; }
+  .btn--scroll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; }
+    .btn--scroll > img {
+      transition-duration: 0.3s; }
+    .btn--scroll:hover > img {
+      transform: translate(0px, 5px); }
 
 .info {
   background-color: #ffffff; }
@@ -749,7 +763,7 @@ a {
       cursor: default;
       background-color: #ffffff; }
       .tabmenu__item--active:hover {
-        color: inherit; }
+        color: #333333; }
 
 .contract {
   padding: 40px 0 128px 0;

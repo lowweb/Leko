@@ -31,4 +31,13 @@
         right: 0;
         bottom: 0;
     }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+
+        & > button {
+            margin-right: 40px;
+        }
+    }
 }
