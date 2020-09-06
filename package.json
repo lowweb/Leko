@@ -17,7 +17,7 @@
         "build gzip": "gulp gzip --production",
         "lint:style": "stylelint \"src/**/*.scss\" --syntax=scss",
         "lint:style --fix": "stylelint \"src/**/*.scss\" --syntax=scss --fix"
-    },  
+    },
     "devDependencies": {
         "@babel/core": "^7.4.3",
         "@babel/preset-env": "^7.4.3",

@@ -102,6 +102,17 @@ document.getElementById("btn-scroll").onclick = function () {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/calculator/calculator.js":
+/*!*****************************************************!*\
+  !*** ./src/blocks/modules/calculator/calculator.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ "./src/blocks/modules/contract-menu/contract-menu.js":
 /*!***********************************************************!*\
   !*** ./src/blocks/modules/contract-menu/contract-menu.js ***!
@@ -177,6 +188,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_contract_menu_contract_menu__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_contract_menu_contract_menu__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_btn_btn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/btn/btn */ "./src/blocks/modules/btn/btn.js");
 /* harmony import */ var _modules_btn_btn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_btn_btn__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules_calculator_calculator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/calculator/calculator */ "./src/blocks/modules/calculator/calculator.js");
+/* harmony import */ var _modules_calculator_calculator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_calculator_calculator__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 

@@ -25,10 +25,19 @@
         <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon-180x180.png">
         <link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png"> -->
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:300,400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link href="styles/select2.css" rel="stylesheet">
+        <link href="styles/select2-addl.css" rel="stylesheet">
+        <link href="styles/select2-krajee-bs4.css" rel="stylesheet">
+        <link href="styles/kv-widgets.css" rel="stylesheet">
+        <link href="styles/bootstrap.css" rel="stylesheet">
+        <link href="styles/all.css" rel="stylesheet">
 
         <link rel="stylesheet" href="styles/main.css">
+        <script>var s2options_e9bc2761 = {"themeCss":".select2-container--krajee-bs4","sizeCss":"","doReset":true,"doToggle":false,"doOrder":false};
+            window.select2_b6264efc = {"dropdownAutoWidth":true,"allowClear":true,"theme":"krajee-bs4","width":"auto","placeholder":"Выберите порт...","language":"ru"};
+            
+            var inputmask_0a332a33 = {"alias":"decimal","prefix":"","groupSeparator":"","radixPoint":",","allowMinus":false,"digits":3,"min":0.1000000000000000055511151231257827021181583404541015625,"max":30};
+            var inputmask_43e0c638 = {"alias":"integer","prefix":"","groupSeparator":"","radixPoint":",","allowMinus":false,"digits":0,"min":1,"max":20000};</script>
     </head>
     <body>
 <!-- <div class="debugGrid">
@@ -50,9 +59,98 @@
 
 </main>
         <script src="js/main.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/kartik-v/yii2-widget-select2@2.1.0/assets/js/select2-krajee.min.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> -->
+        <!-- <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script> --> -->
+        
+         <!-- <script src="https://cdn.jsdelivr.net/gh/kartik-v/yii2-widget-select2@2.1.0/assets/js/select2-krajee.min.js"></script> -->
+         <script src="js/jquery.js"></script> 
+        <script src="js/yii.js"></script>
+        <script src="js/select2.full.js"></script>
+        <script src="js/i18n/ru.js"></script>
+        <script src="js/select2-krajee.js"></script> 
+        <script src="js/kv-widgets.js"></script>
+        <script src="js/jquery.inputmask.bundle.js"></script>
+        <script src="js/yii.validation.js"></script>
+        <script src="js/punycode.js"></script>
+        <script src="js/main.min.js"></script>
+        <script src="js/bootstrap.bundle.js"></script>
+        <script>
+            jQuery(function ($) {
+
+$(function () {
+    $("#formmodel-destination_id").on("change", function(){
+        var selectedOptions = $(this).children("option:selected");
+        if(selectedOptions && selectedOptions.data("delivery_in_city") == 1){
+            $("#formmodel-door").removeAttr("disabled");
+        } else {
+            $("#formmodel-door").prop("checked", false).attr("disabled", "disabled");
+        }
+    });
+    $("#FormModel").on('beforeSubmit', function () {
+        var yiiform = $(this);
+        // отправляем данные на сервер
+        $("body").addClass("modal-open");
+        $(".modal-backdrop").removeClass("d-none").addClass("d-flex show");
+        $.ajax({
+                type: yiiform.attr('method'),
+                url: yiiform.attr('action'),
+                data: yiiform.serializeArray()
+            }
+        )
+        .done(function(data) {
+            $("#formmodel-freight").val(data.freight);
+            $("#formmodel-port_transshipment").val(data.port_transshipment);
+            $("#formmodel-bill_of_lading").val(data.bill_of_lading);
+            $("#formmodel-delivery_to_rf").val(data.delivery_to_rf);
+            $("#formmodel-costs_to_rf").val(data.costs_to_rf);
+            $("#formmodel-costs_in_rf").val(data.costs_in_rf);
+            $("#formmodel-total_amount").val(data.total_amount);
+            
+            $("#formmodel-transit_time_to_vld").html(data.transit_time_to_vld);
+            $("#formmodel-transit_time_from_vld").html(data.transit_time_from_vld);
+            $("#formmodel-dimension_data").html(data.dimension_data);
+            
+           if(data.success) {
+              // данные сохранены
+            } else {
+              // сервер вернул ошибку и не сохранил наши данные
+            }
+        })
+        .fail(function () {
+             // не удалось выполнить запрос к серверу
+        })
+        .always(function() {
+            $(".modal-backdrop").addClass("d-none").removeClass("d-flex show");
+            $("body").removeClass("modal-open");
+        });
+    
+        return false; // отменяем отправку данных формы
+    })
+});
+jQuery&&jQuery.pjax&&(jQuery.pjax.defaults.maxCacheLength=0);
+if (jQuery('#formmodel-shipping_port_id').data('select2')) { jQuery('#formmodel-shipping_port_id').select2('destroy'); }
+jQuery.when(jQuery('#formmodel-shipping_port_id').select2(select2_b6264efc)).done(initS2Loading('formmodel-shipping_port_id','s2options_e9bc2761'));
+
+jQuery("#formmodel-volume").inputmask(inputmask_0a332a33);
+jQuery("#formmodel-weight").inputmask(inputmask_43e0c638);
+if (jQuery('#formmodel-destination_id').data('select2')) { jQuery('#formmodel-destination_id').select2('destroy'); }
+jQuery.when(jQuery('#formmodel-destination_id').select2(select2_b6264efc)).done(initS2Loading('formmodel-destination_id','s2options_e9bc2761'));
+
+jQuery('#FormModel').yiiActiveForm([{"id":"formmodel-shipping_port_id","name":"shipping_port_id","container":".field-formmodel-shipping_port_id","input":"#formmodel-shipping_port_id","error":".invalid-feedback","enableAjaxValidation":true},{"id":"formmodel-volume","name":"volume","container":".field-formmodel-volume","input":"#formmodel-volume","error":".invalid-feedback","enableAjaxValidation":true},{"id":"formmodel-weight","name":"weight","container":".field-formmodel-weight","input":"#formmodel-weight","error":".invalid-feedback","enableAjaxValidation":true},{"id":"formmodel-destination_id","name":"destination_id","container":".field-formmodel-destination_id","input":"#formmodel-destination_id","error":".invalid-feedback","enableAjaxValidation":true},{"id":"formmodel-condition","name":"condition","container":".field-formmodel-condition","input":"#formmodel-condition","error":".invalid-feedback","enableAjaxValidation":true},{"id":"formmodel-door","name":"door","container":".field-formmodel-door","input":"#formmodel-door","error":".invalid-feedback","enableAjaxValidation":true}], {"errorSummary":".alert.alert-danger","errorCssClass":"is-invalid","successCssClass":"is-valid","validationStateOn":"input","validationUrl":"\/site\/calcval"});
+"use strict";
+grecaptcha.ready(function() {
+    grecaptcha.execute("6LcmfasUAAAAAOfPATFKwfbnVa_ybFrYJP0wc3LM", {action: "/"}).then(function(token) {
+        jQuery("#" + "messageform-recaptcha").val(token);
+
+        const jsCallback = "";
+        if (jsCallback) {
+            eval("(" + jsCallback + ")(token)");
+        }
+    });
+});
+jQuery('#MessageForm').yiiActiveForm([{"id":"messageform-recaptcha","name":"reCaptcha","container":".field-messageform-recaptcha","input":"#messageform-recaptcha","error":".invalid-feedback","enableAjaxValidation":true},{"id":"messageform-username","name":"userName","container":".field-messageform-username","input":"#messageform-username","error":".invalid-feedback","enableAjaxValidation":true,"validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Необходимо заполнить «Имя пользователя»."});yii.validation.string(value, messages, {"message":"Значение «Имя пользователя» должно быть строкой.","max":30,"tooLong":"Значение «Имя пользователя» должно содержать максимум 30 символов.","skipOnEmpty":1});}},{"id":"messageform-phone","name":"phone","container":".field-messageform-phone","input":"#messageform-phone","error":".invalid-feedback","enableAjaxValidation":true,"validate":function (attribute, value, messages, deferred, $form) {yii.validation.string(value, messages, {"message":"Значение «Номер телефона» должно быть строкой.","max":20,"tooLong":"Значение «Номер телефона» должно содержать максимум 20 символов.","skipOnEmpty":1});}},{"id":"messageform-email","name":"email","container":".field-messageform-email","input":"#messageform-email","error":".invalid-feedback","enableAjaxValidation":true,"validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Необходимо заполнить «Email»."});yii.validation.email(value, messages, {"pattern":/^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/,"fullPattern":/^[^@]*<[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?>$/,"allowName":false,"message":"Значение «Email» не является правильным email адресом.","enableIDN":true,"skipOnEmpty":1});}},{"id":"messageform-text","name":"text","container":".field-messageform-text","input":"#messageform-text","error":".invalid-feedback","enableAjaxValidation":true,"validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Необходимо заполнить «Текст сообщения»."});yii.validation.string(value, messages, {"message":"Значение «Текст сообщения» должно быть строкой.","skipOnEmpty":1});}}], {"errorSummary":".alert.alert-danger","errorCssClass":"is-invalid","successCssClass":"is-valid","validationStateOn":"input","validationUrl":"\/site\/mesval"});
+});
+        </script>
 
     </body>
 </html>
