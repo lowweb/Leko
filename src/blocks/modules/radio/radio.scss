@@ -1,15 +1,19 @@
-
+$radiomark-width: 10px;
+$radimark-height: 10px;
 
 .radio {
     padding-left: 32px;
     position: relative;
+    @include fnt-roboto ($clr-dark-grey, 17px, 24px, normal);
     
     &__input {
         position: absolute;
         appearance: none;
         -webkit-appearance: none;
-        &:checked + .check__box{
-            border: 2px solid $clr-green;
+
+        &:checked + .radio__box{
+            border-radius: 50%;
+            border: none;
             background-color: $clr-green;
             
 
@@ -17,26 +21,29 @@
                 content: "";
                 position: absolute;
                 opacity: 1;
-                top: 40%;
+                top: 50%;
                 left: 50%;
-                transform-origin: left top;
-                width: $check-width;
-                height: $check-height;
-                border-left:2px solid #FFFFFF;
-                border-top:2px solid #FFFFFF;
-                transform:  rotate(-135deg) translate(-50%,-50%);
-                animation-duration: .8s;
+                width: $radiomark-width;
+                height: $radimark-height;
+                background-color: #FFFFFF;
+                border-radius: 50%;
+                transform:  translate(-50%,-50%);
+                animation-duration: .2s;
                 animation-timing-function: ease;
-                animation-name: checkmark;
+                animation-name: radiocheck;
             }
         }
         &:focus + .check__box {
             
         }
 
-        &:disabled + .check__box {
-            cursor: not-allowed;
+        &:disabled + .radio__box {
+            background-color: #ECEDEE;
         }
+        &:disabled ~ .radio__label {
+          color: #D2D3D4;
+        }
+
 
     }
 
@@ -48,29 +55,29 @@
         height: 24px;
         background-color: #FFFFFF;
         border: 2px solid $clr-grey-border;
-        border-radius: 6px;
+        border-radius: 50%;
     }
 }
 
-@keyframes checkmark {
+@keyframes radiocheck {
     0% {
       height: 0;
-      width: $check-width;
+      width: 0;
       opacity: 1;
     }
     20% {
-      height: $check-width;
-      width: $check-width;
+      height: $radimark-height/5;
+      width: $radiomark-width/5;
       opacity: 1;
     }
     40% {
-      height: $check-height;
-      width: $check-width;
+      height: $radimark-height/2;
+      width: $radiomark-width/2;
       opacity: 1;
     }
     100% {
-      height: $check-height;
-      width: $check-width;
+      height: $radimark-height;
+      width: $radiomark-width;
       opacity: 1;
     }
   }

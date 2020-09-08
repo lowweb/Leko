@@ -1,30 +1,31 @@
-$check-height: 11px;
-$check-width: 7.5px;
+$check-size: 24px;
+$checkmark-height: 7.5px;
+$checkmark-width: 11px;
+$position-mark: ($check-size/2 - ($checkmark-width - $checkmark-height)/2); 
 
 .check {
     padding-left: 32px;
     position: relative;
+    @include fnt-roboto ($clr-dark-grey, 17px, 24px, normal);
     &__input {
         position: absolute;
         appearance: none;
         -webkit-appearance: none;
         &:checked + .check__box{
-            border: 2px solid $clr-green;
+            border: none;
             background-color: $clr-green;
             
 
             &:before {
                 content: "";
                 position: absolute;
-                opacity: 1;
-                top: 40%;
-                left: 50%;
-                transform-origin: left top;
-                width: $check-width;
-                height: $check-height;
-                border-left:2px solid #FFFFFF;
-                border-top:2px solid #FFFFFF;
-                transform:  rotate(-135deg) translate(-50%,-50%);
+                transform-origin: left bottom;
+                width: $checkmark-width;
+                height: $checkmark-height;
+                top: 50%;
+                transform: translate($position-mark, -50%) rotate(-45deg);
+                border-left: 2px solid #FFFFFF;
+                border-bottom: 2px solid #FFFFFF;
                 animation-duration: .8s;
                 animation-timing-function: ease;
                 animation-name: checkmark;
@@ -35,8 +36,11 @@ $check-width: 7.5px;
         }
 
         &:disabled + .check__box {
-            cursor: not-allowed;
+            background-color: #ECEDEE;
         }
+        &:disabled ~ .check__label {
+          color: #D2D3D4;
+      }
 
     }
 
@@ -54,23 +58,23 @@ $check-width: 7.5px;
 
 @keyframes checkmark {
     0% {
-      height: 0;
-      width: $check-width;
+      height: $checkmark-height;
+      width: 0;
       opacity: 1;
     }
     20% {
-      height: $check-width;
-      width: $check-width;
+      height: $checkmark-height;
+      width: $checkmark-height;
       opacity: 1;
     }
     40% {
-      height: $check-height;
-      width: $check-width;
+      height: $checkmark-height;
+      width: $checkmark-width;
       opacity: 1;
     }
     100% {
-      height: $check-height;
-      width: $check-width;
+      height: $checkmark-height;
+      width: $checkmark-width;
       opacity: 1;
     }
   }

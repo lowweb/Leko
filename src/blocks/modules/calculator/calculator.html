@@ -75,7 +75,7 @@
                         <label for="formmodel-volume">Объём (м³)</label>
                         <input type="text" id="formmodel-volume" class="form-control is-invalid" name="FormModel[volume]"
                             placeholder="от 0.1 до 30" aria-required="true" data-plugin-inputmask="inputmask_0a332a33"
-                            style="text-align: right;">
+                            style="text-align: left;">
                             <div class="invalid-feedback">Необходимо заполнить «Объём (м³)».</div>
                         <div class="invalid-feedback"></div>
                     </div>
@@ -85,7 +85,17 @@
                         <label for="formmodel-weight">Масса (кг)</label>
                         <input type="text" id="formmodel-weight" class="form-control is-valid" name="FormModel[weight]"
                             placeholder="от 1 до 20000" aria-required="true" data-plugin-inputmask="inputmask_43e0c638"
-                            style="text-align: right;">
+                            style="text-align: left;">
+
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group field-formmodel-weight required">
+                        <label for="formmodel-weight">Масса (кг)</label>
+                        <input type="text" id="formmodel-weight" class="form-control" name="FormModel[weight]"
+                            placeholder="от 1 до 20000" aria-required="true" data-plugin-inputmask="inputmask_43e0c638"
+                            style="text-align: left;">
 
                         <div class="invalid-feedback"></div>
                     </div>
@@ -121,25 +131,30 @@
                 </div> -->
                 <div class="radio__group">
                     <label class="radio">
-                        <input type="radio" class="radio__input" name="radio" value="FOB">
+                        <input type="radio" class="radio__input" name="radio" value="FOB" checked>
                         <span class="radio__box"></span>
-                        FOB
+                        <span class="radio__label">FOB</span>
                     </label>
                     <label class="radio">
                         <input type="radio" class="radio__input" name="radio" value="FCA">
                         <span class="radio__box"></span>
-                        FCA
+                        <span class="radio__label">FCA</span>
                     </label>
                     <label class="radio">
-                        <input type="radio" class="radio__input" name="radio" value="EXW">
+                        <input type="radio" class="radio__input" name="radio" value="EXW" disabled>
                         <span class="radio__box"></span>
-                        EXW
+                        <span class="radio__label">EXWw</span>
                     </label>
                 </div>
                 <label class="check">
                     <input class="check__input" type="checkbox">
                     <span class="check__box"></span>
-                    Доставка до “дверей”
+                    <span class="check__label">Доставка до “дверей”</span>
+                </label>
+                <label class="check">
+                    <input class="check__input" type="checkbox" disabled>
+                    <span class="check__box"></span>
+                    <span class="check__label">Доставка до “дверей”</span>
                 </label>
             </div>
             

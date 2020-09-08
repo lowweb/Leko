@@ -21,23 +21,35 @@
     }
 
     // select2 restyle
+    & .form-control {
+        // height: 44px;
+        padding: 8px 40px 8px 14px; 
+        @include fnt-roboto ($clr-dark-grey, 17px, 24px, normal);
+        border: 2px solid $clr-grey-border;
+        border-radius: 6px;
+        height: auto;
+
+        &::placeholder {
+            color: $clr-grey-border;
+        }
+    }
     & .form-control.is-valid {
         background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%2335C253'/%3E%3Cpath d='M7 12L10.5 15.5L18 8' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
         border: 2px solid #35C253;
         border-radius: 6px;
-        padding-right: calc(1.5em + 0.75rem);
+        padding-right: 40px;
         background-repeat: no-repeat;
-        background-position: right calc(0.375em + 0.1875rem) center;
-        background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);   
+        background-position: right 8px center;
+        background-size: 24px;  
     }
     & .form-control.is-invalid {
         background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23DE1832'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.24264 7.75736L7.82843 9.17157L10.6569 12L7.82843 14.8284L9.24264 16.2426L12.0711 13.4142L14.8995 16.2426L16.3137 14.8284L13.4853 12L16.3137 9.17157L14.8995 7.75736L12.0711 10.5858L9.24264 7.75736Z' fill='white'/%3E%3C/svg%3E%0A");
         border: 2px solid #DE1832;
         border-radius: 6px;
-        padding-right: calc(1.5em + 0.75rem);
+        padding-right: 40px;
         background-repeat: no-repeat;
-        background-position: right calc(0.375em + 0.1875rem) center;
-        background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+        background-position: right 8px center;
+        background-size: 24px;
     }
     & .invalid-feedback{
         margin-top: 4px;
@@ -46,4 +58,64 @@
     & .custom-checkbox label{
         @include fnt-roboto ($clr-dark-grey, 17px, 24px, normal);
     }
+
+    & .form-group label {
+        @include fnt-roboto-c ($clr-menu, 15px, 18px, normal);
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+
+    .select2-container--krajee-bs4 .select2-selection {
+        padding: 8px 40px 8px 14px; 
+        @include fnt-roboto ($clr-dark-grey, 17px, 24px, normal);
+        border: 2px solid $clr-grey-border;
+        border-radius: 6px;
+        height: auto;
+    }
+    .select2-container--krajee-bs4 .select2-selection--single .select2-selection__placeholder {
+        @include fnt-roboto ($clr-grey-border, 17px, 24px, normal);
+        color: $clr-grey-border;
+    }
+    .select2-container--krajee-bs4 .select2-selection--single .select2-selection__arrow {
+        border: none;
+        border-left: none;
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+        position: absolute;
+        height: 98%;
+        top: 1px;
+        right: 1px;
+        width: 36px;
+
+    }
+
+    .select2-container--krajee-bs4 .select2-selection--single .select2-selection__arrow b {
+        border-radius: 1px;
+        border-color: $clr-menu transparent transparent transparent;
+    }
+
+    .select2-container--krajee-bs4.select2-container--open .select2-selection--single .select2-selection__arrow b {
+        border-color: transparent transparent $clr-menu transparent; 
+    }
+    
+}
+
+.select2-container--krajee-bs4:not(.select2-container--disabled) .select2-dropdown{
+    margin-top: 2px;
+    background-color: #FFFFFF;
+    border: 2px solid #D2D3D4;
+    border-radius: 6px;
+}
+
+.select2-container--krajee-bs4.select2-container--open:not(.select2-container--disabled) .select2-selection, .select2-container--krajee-bs4:not(.select2-container--disabled) .select2-selection:focus {
+    // border-color: ;
+    box-shadow: none;
+}
+.select2-container--krajee-bs4.select2-container--open.select2-container--below .select2-selection {
+    border: 2px solid $clr-grey-border;
+}
+
+.select2-container--krajee-bs4:not(.select2-container--disabled) .select2-dropdown {
+    box-shadow: none;
 }
