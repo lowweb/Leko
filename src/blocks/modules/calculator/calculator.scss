@@ -1,5 +1,5 @@
 .calc {
-    background-color: #ECEDEE;
+    // background-color: #ECEDEE;
     padding: 56px 0 64px 0;
     &__cap {
         @include fnt-roboto-c ($clr-dark-grey, 32px, 37px, bold);
@@ -19,7 +19,78 @@
 
         
     }
-     &__body {
+    &__body {
+        display: grid;
+        grid-template-columns: 1fr 72px 1fr;
+        grid-column-gap: 24px;
+    }
+
+    &__arrow {
+        align-self: center;
+        &.is-valid > svg > path{
+            stroke: $clr-green;
+        }
+    }
+    &__result {
+        padding: 32px 40px 24px 40px;
+        border-radius: 6px;
+        background-color:#ECEDEE;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+
+        &--cap {
+            @include fnt-roboto-c ($clr-blck, 20px, 23px, normal);
+            margin-bottom: 16px;
+        }
+
+        &--group {
+            @include fnt-roboto ($clr-dark-grey, 17px, 24px, normal);
+
+            & tr {
+                line-height: 40px;
+            }
+
+            & + & {
+                margin-top: 16px;
+            } 
+        }
+        &--summ {
+            display: flex;
+            flex-direction: column;
+            @include fnt-roboto ($clr-dark-grey, 17px, 24px, bold);
+        }
+        &--summresume {
+            @include fnt-roboto ($clr-grey, 16px, 21px, normal);
+            margin-top: 16px;
+
+        }
+        &--groupresume {
+            margin-top: 8px;
+            margin-bottom: 16px;
+            @include fnt-roboto ($clr-grey, 16px, 21px, normal);
+            position: relative;
+            padding-left: 8px;
+
+            &:before {
+                margin-left: -8px;
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 2px;
+                background-color: $clr-red;
+            }
+        }
+        td:nth-child(3n) {
+            text-align: end;
+            width: 28px;
+        }
+        td:nth-child(2) {
+            text-align: end;
+        }
+    }
+     &__form {
         display: grid;
         display: grid;
         grid-template-rows: 1fr 1fr;
@@ -31,7 +102,7 @@
                             "dest dest"
                             "door door"
                             "inko inko"
-                            "button button"
+                            
 
      }
      & .field-formmodel-shipping_port_id {
@@ -61,10 +132,16 @@
      }
 
      & .btn {
-        grid-area: button;
         width: 140px;
-        justify-self: end;
+        display: block;
+        float: right;
+     }
 
+     &__sepline{
+        border-bottom: 1px solid #D2D3D4;
+        display: block;
+        margin-top: 24px;
+        margin-bottom: 24px;
      }
     // select2 restyle
     & .form-control {

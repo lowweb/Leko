@@ -467,12 +467,7 @@ a {
       opacity: 0.6; }
 
 .hd__logo {
-  margin: 24px 0 16px 0;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 12px;
-  margin-right: 12px;
-  width: calc(33.33333% - 24px); }
+  margin: 24px 0 16px 0; }
   .hd__logo-cap {
     font-family: 'Roboto', sans-serif;
     line-height: 20px;
@@ -485,11 +480,6 @@ a {
 
 .hd__contact {
   display: flex;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 12px;
-  margin-right: 12px;
-  width: calc(66.66667% - 24px);
   margin-left: auto; }
   .hd__contact-tel {
     margin-left: auto;
@@ -519,7 +509,6 @@ a {
       content: url("../img/icn-mail.png"); }
 
 .calc {
-  background-color: #ECEDEE;
   padding: 56px 0 64px 0; }
   .calc__cap {
     font-family: 'Roboto Condensed', sans-serif;
@@ -546,12 +535,87 @@ a {
     flex-direction: column; }
   .calc__body {
     display: grid;
+    grid-template-columns: 1fr 72px 1fr;
+    grid-column-gap: 24px; }
+  .calc__arrow {
+    align-self: center; }
+    .calc__arrow.is-valid > svg > path {
+      stroke: #35C253; }
+  .calc__result {
+    padding: 32px 40px 24px 40px;
+    border-radius: 6px;
+    background-color: #ECEDEE;
+    display: flex;
+    flex-direction: column;
+    height: fit-content; }
+    .calc__result--cap {
+      font-family: 'Roboto Condensed', sans-serif;
+      line-height: 23px;
+      font-weight: normal;
+      font-size: 20px;
+      color: #000000;
+      font-style: normal;
+      margin-bottom: 16px; }
+    .calc__result--group {
+      font-family: 'Roboto', sans-serif;
+      line-height: 24px;
+      font-weight: normal;
+      font-size: 17px;
+      color: #333333;
+      font-style: normal; }
+      .calc__result--group tr {
+        line-height: 40px; }
+      .calc__result--group + .calc__result--group {
+        margin-top: 16px; }
+    .calc__result--summ {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Roboto', sans-serif;
+      line-height: 24px;
+      font-weight: bold;
+      font-size: 17px;
+      color: #333333;
+      font-style: normal; }
+    .calc__result--summresume {
+      font-family: 'Roboto', sans-serif;
+      line-height: 21px;
+      font-weight: normal;
+      font-size: 16px;
+      color: #666666;
+      font-style: normal;
+      margin-top: 16px; }
+    .calc__result--groupresume {
+      margin-top: 8px;
+      margin-bottom: 16px;
+      font-family: 'Roboto', sans-serif;
+      line-height: 21px;
+      font-weight: normal;
+      font-size: 16px;
+      color: #666666;
+      font-style: normal;
+      position: relative;
+      padding-left: 8px; }
+      .calc__result--groupresume:before {
+        margin-left: -8px;
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 2px;
+        background-color: #DE1832; }
+    .calc__result td:nth-child(3n) {
+      text-align: end;
+      width: 28px; }
+    .calc__result td:nth-child(2) {
+      text-align: end; }
+  .calc__form {
+    display: grid;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 24px;
     grid-row-gap: 32px;
-    grid-template-areas: "volume weight" "from from" "dest dest" "door door" "inko inko" "button button"; }
+    grid-template-areas: "volume weight" "from from" "dest dest" "door door" "inko inko"; }
   .calc .field-formmodel-shipping_port_id {
     grid-area: from; }
   .calc .field-formmodel-destination_id {
@@ -565,9 +629,14 @@ a {
   .calc .radio__group {
     grid-area: inko; }
   .calc .btn {
-    grid-area: button;
     width: 140px;
-    justify-self: end; }
+    display: block;
+    float: right; }
+  .calc__sepline {
+    border-bottom: 1px solid #D2D3D4;
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 24px; }
   .calc .form-control {
     padding: 8px 40px 8px 14px;
     font-family: 'Roboto', sans-serif;
@@ -800,7 +869,8 @@ a {
     color: #ffffff;
     font-style: normal;
     margin-bottom: 16px;
-    width: 517px; }
+    width: 517px;
+    z-index: 3; }
   .about__sub-cap {
     font-family: 'Roboto Condensed', sans-serif;
     line-height: 37px;
@@ -809,14 +879,16 @@ a {
     color: #ffffff;
     font-style: normal;
     margin-bottom: 32px;
-    width: 411px; }
+    width: 411px;
+    z-index: 3; }
   .about__truck {
     position: absolute;
     right: 0;
     bottom: 0; }
   .about__btn {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    z-index: 3; }
     .about__btn > button {
       margin-right: 40px; }
 
@@ -1137,12 +1209,16 @@ a {
 .radio {
   padding-left: 32px;
   position: relative;
+  display: inline-flex;
+  padding-right: 40px;
   font-family: 'Roboto', sans-serif;
   line-height: 24px;
   font-weight: normal;
   font-size: 17px;
   color: #333333;
   font-style: normal; }
+  .radio:nth-last-child() {
+    padding-right: 0px; }
   .radio__group-cap {
     font-family: 'Roboto Condensed', sans-serif;
     line-height: 18px;

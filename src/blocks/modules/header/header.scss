@@ -1,8 +1,8 @@
 .hd {
    &__logo {
         margin: 24px 0 16px 0;
-        @include col();
-        @include size(4);
+        // @include col();
+        // @include size(4);
        &-cap{
             @include fnt-roboto ($clr-grey, 14px, 20px, normal);
             letter-spacing: 0.04em;
@@ -12,9 +12,15 @@
 
    &__contact {
         display: flex;
-        @include col();
-        @include size(8);
+        // @include col();
+        // @include size(8);
+        // @include size-sm(4.5);
+
+        // @include sm-block () {
+        //     flex-direction: column;
+        // };
         margin-left: auto;
+
 
        &-tel {
         margin-left: auto;

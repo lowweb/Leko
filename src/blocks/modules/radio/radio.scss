@@ -4,6 +4,12 @@ $radimark-height: 10px;
 .radio {
     padding-left: 32px;
     position: relative;
+    display: inline-flex;
+    padding-right: 40px;
+
+    &:nth-last-child() {
+      padding-right: 0px;
+    }
     @include fnt-roboto ($clr-dark-grey, 17px, 24px, normal);
     &__group-cap {
       @include fnt-roboto-c ($clr-menu, 15px, 18px, bold);

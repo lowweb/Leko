@@ -17,12 +17,14 @@
         @include fnt-roboto-c ($clr-white, 48px, 56px, bold);
         margin-bottom: 16px;
         width: 517px;
+        z-index: 3;
     }
 
     &__sub-cap {
         @include fnt-roboto-c ($clr-white, 32px, 37px, normal);
         margin-bottom: 32px;
         width: 411px;
+        z-index: 3;
 
     }
 
@@ -30,11 +32,14 @@
         position: absolute;
         right: 0;
         bottom: 0;
+
+        
     }
 
     &__btn {
         display: flex;
         align-items: center;
+        z-index: 3;
 
         & > button {
             margin-right: 40px;
