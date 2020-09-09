@@ -144,6 +144,20 @@ function clickMenuContr(el) {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/ham/ham.js":
+/*!***************************************!*\
+  !*** ./src/blocks/modules/ham/ham.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.getElementById("menu-btn").onclick = function () {
+  document.getElementById("menu-btn").classList.toggle('ham--active');
+  document.getElementsByClassName('menu__nav')[0].classList.toggle('menu__nav--opn');
+};
+
+/***/ }),
+
 /***/ "./src/blocks/modules/tabmenu/tabmenu.js":
 /*!***********************************************!*\
   !*** ./src/blocks/modules/tabmenu/tabmenu.js ***!
@@ -190,6 +204,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_btn_btn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_btn_btn__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _modules_calculator_calculator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/calculator/calculator */ "./src/blocks/modules/calculator/calculator.js");
 /* harmony import */ var _modules_calculator_calculator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_calculator_calculator__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _modules_ham_ham__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/ham/ham */ "./src/blocks/modules/ham/ham.js");
+/* harmony import */ var _modules_ham_ham__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_ham_ham__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
