@@ -9,8 +9,12 @@ $position-mark: ($check-size/2 - ($checkmark-width - $checkmark-height)/2);
     @include fnt-roboto ($clr-dark-grey, 17px, 24px, normal);
     &__input {
         position: absolute;
-        appearance: none;
-        -webkit-appearance: none;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        // appearance: none;
+        // -webkit-appearance: none;
         &:checked + .check__box{
             border: none;
             background-color: $clr-green;

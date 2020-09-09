@@ -5,12 +5,19 @@ $radimark-height: 10px;
     padding-left: 32px;
     position: relative;
     @include fnt-roboto ($clr-dark-grey, 17px, 24px, normal);
-    
-    &__input {
-        position: absolute;
-        appearance: none;
-        -webkit-appearance: none;
+    &__group-cap {
+      @include fnt-roboto-c ($clr-menu, 15px, 18px, bold);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
 
+    &__input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
         &:checked + .radio__box{
             border-radius: 50%;
             border: none;
