@@ -32,23 +32,23 @@
             border-top: 1px solid $clr-dark-grey;
         }
     }
-    &__lf {
+    &__items {
         display: flex;
-        @media only screen and (max-width: 805px) {
-            flex-direction: column;
-            width: 100%;
-        }
+        flex: 1;
 
-    }
-    &__rg {
-        display: flex;
-        margin-left: auto;
+        & li:nth-child(4n) {
+            margin-left: auto;
+        }
         @media only screen and (max-width: 805px) {
             flex-direction: column;
-            margin-left: 0;
             width: 100%;
+
+            & li:nth-child(4n) {
+                margin-left: 0;
+            }
         }
     }
+
     &__itm-enter {
         &:before {
             content: url('../img/icn-enter.png'); 
@@ -66,15 +66,34 @@
         }
         @media only screen and (max-width: 805px) {
             padding: 12px 20px;
+            font-size: 24px;
         }
 
     }
 
     & .ham {
         @media only screen and (max-width: 805px) {
-            display: block;
+            display: flex;
+            align-self: center;
             padding: 16px 0;
-            // margin-left: 20px;
         } 
+    }
+    & .hd__contact-mail,& .hd__contact-tel {
+        display: none;
+        @media only screen and (max-width: 805px) {
+            display: flex;
+        }
+
+    }
+    & .hd__contact-tel {
+        margin-bottom: 0;
+        margin-top: 16px;
+    }
+    & .hd__contact-mail {
+        margin-bottom: 42px;
+        color: $clr-lnk;
+        &:hover {
+            color: $clr-lnk--h;
+        }
     }
 }

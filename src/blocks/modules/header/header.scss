@@ -5,9 +5,8 @@
         padding-bottom: 16px;
     }
    &__logo {
-        // margin: 24px 0 16px 0;
-        // @include col();
-        // @include size(4);
+    display: flex;
+    flex-direction: column;
        &-cap{
             @include fnt-roboto ($clr-grey, 14px, 20px, normal);
             letter-spacing: 0.04em;
@@ -32,7 +31,7 @@
             // align-items: flex-end;
         }
 
-        @media only screen and (max-width: 580px) {
+        @media only screen and (max-width: 805px) {
             display: none;
         }
 
@@ -44,6 +43,7 @@
         margin-right: 40px;
         @media only screen and (max-width: 850px) {
             margin-right: 0;
+            margin-bottom: 12px;
         }
 
         & > a {

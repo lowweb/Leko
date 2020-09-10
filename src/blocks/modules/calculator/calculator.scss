@@ -1,28 +1,23 @@
 .calc {
     // background-color: #ECEDEE;
-    padding: 56px 0 64px 0;
+    padding: 56px 0 0 0;
     &__cap {
         @include fnt-roboto-c ($clr-dark-grey, 32px, 37px, bold);
         letter-spacing: 0.06em;
         text-transform: uppercase;
         margin-bottom: 56px;
     }
-    &__items {
-        @include row-flex();
-    }
-
-    &__item {
-        @include col();
-        @include size(3);
-        display: flex;
-        flex-direction: column;
-
-        
-    }
+    
     &__body {
         display: grid;
-        grid-template-columns: 1fr 72px 1fr;
+        grid-template-columns: 1fr  72px 1fr;
         grid-column-gap: 24px;
+
+        @media only screen and (max-width: 850px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: max-content 72px max-content;
+            row-gap: 0;
+        }
     }
 
     &__arrow {
@@ -30,6 +25,17 @@
         &.is-valid > svg > path{
             stroke: $clr-green;
         }
+        @media only screen and (max-width: 850px) {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 16px;
+            & svg {
+                transform: rotate(90deg);
+            }
+            
+
+        }
+        
     }
     &__result {
         padding: 32px 40px 24px 40px;
@@ -96,7 +102,6 @@
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 24px;
-        grid-row-gap: 32px;
         grid-template-areas: "volume weight"
                             "from from"
                             "dest dest"
@@ -319,4 +324,9 @@
 .select2-container--krajee-bs4 .select2-results__option--highlighted[aria-selected] {
     background-color: rgba(53, 192, 83, 0.12);
     font-weight: 500;
+}
+
+
+.is-invalid + .invalid-feedback {
+    margin-bottom: 12px;
 }

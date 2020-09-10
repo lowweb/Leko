@@ -2,8 +2,12 @@
 .ham {    
 	cursor: pointer;
 	display: none;
+	@include fnt-roboto-c ($clr-white, 18px, 24px, normal);
 
-	&-bar{
+	&__bar-group {
+		margin-right: 16px;
+	}
+	&__bar{
 		width: 20px;
 		height: 2px;
 		background-color: #ffffff;
@@ -11,13 +15,13 @@
 		transition: 0.3s;
 	}
 
-	&--active &-bar--one{
+	&--active &__bar--one{
 		transform: rotate(-45deg) translate(-4px, 4px);
 	}
-	&--active &-bar--two{
+	&--active &__bar--two{
 		opacity: 0;
 	}
-	&--active &-bar--three{
+	&--active &__bar--three{
 		transform: rotate(45deg) translate(-4px, -4px);
 	}
  }
