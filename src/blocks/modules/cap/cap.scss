@@ -1,0 +1,23 @@
+.cap {
+    @include fnt-roboto-c ($clr-dark-grey, 32px, 37px, bold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    &--mb24 {
+        margin-bottom: 24px;
+    }
+    &--mb56 {
+        margin-bottom: 56px;
+        @media only screen and (max-width: 768px) {
+           margin-bottom: 40px;
+        }
+        @media only screen and (max-width: 420px) {
+            margin-bottom: 24px;
+         }
+    }
+    @media only screen and (max-width: 420px) {
+        font-size: 27px;
+        line-height: 32px;
+    }
+    
+}

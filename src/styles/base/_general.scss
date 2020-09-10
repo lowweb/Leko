@@ -11,14 +11,23 @@ h1, h2, h3, h4, h5, h6, ul {
 }
 
 .wrapper  {
-	@include wrapper ();
+	// @include wrapper ();
+	max-width: 1128px;
+    margin: 0 auto;
+    padding-left: 24px;
+	padding-right: 24px;
+	
+	@media only screen and (max-width: 768px) {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
 }
 .row-f {
 	// @include row-flex ();
 	display: flex;
 }
 .col {
-	@include col ();
+	// @include col ();
 }
 
 * {

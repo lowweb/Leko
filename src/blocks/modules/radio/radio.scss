@@ -5,13 +5,26 @@ $radimark-height: 10px;
     padding-left: 32px;
     position: relative;
     display: inline-flex;
-    padding-right: 40px;
+    margin-right: 40px;
 
-    &:nth-last-child() {
-      padding-right: 0px;
+    @media only screen and (max-width: 370px) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    &__group {
+      display: flex;
+      flex-wrap: wrap;
+      @media only screen and (max-width: 370px) {
+        justify-content: space-between;
+      }
     }
     @include fnt-roboto ($clr-dark-grey, 17px, 24px, normal);
     &__group-cap {
+      flex: 1 0 100%;
       @include fnt-roboto-c ($clr-menu, 15px, 18px, bold);
       letter-spacing: 0.03em;
       text-transform: uppercase;

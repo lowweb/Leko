@@ -1,21 +1,29 @@
 .footer {
 	@include fnt-roboto ($clr-white, 16px, 19px, normal); 
-	height: 56px;
-	padding: 19px 0px 18px 0px;
-	// display: flex;
-	// align-items: center;
+	
 	background-color: #3D4855;
 
-	&__rg {
-		margin-left: auto;
-	}
 	& .wrapper {
 		display: flex;
 		justify-content: space-between;
-	}
+		padding: 19px 24px 18px 24px;
 
+		@media only screen and (max-width: 420px) {
+			padding: 24px 20px;
+			flex-direction: column;
+        }
+	}
+	&__item {
+		@media only screen and (max-width: 420px) {
+			&:first-child {
+				margin-bottom: 16px;
+			}
+				
+		}
+	}
 	& a {
 		color: $clr-white;
+		
 
 		&:hover {
 			opacity: 0.6;

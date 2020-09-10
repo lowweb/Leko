@@ -118,7 +118,7 @@
 </section>
     <section class="calc">
     <div class="wrapper">
-        <div class="calc__cap">Калькулятор стоимости</div>
+        <div class="cap cap--mb56">Калькулятор стоимости</div>
         <div class="calc__body">
             <form id="FormModel" action="/site/calculate" method="post" enctype="multipart/form-data">
 
@@ -126,7 +126,7 @@
                     <div class="calc__form">
                         <div class="form-group field-formmodel-shipping_port_id required">
                             <label for="formmodel-shipping_port_id">Порт отгрузки</label>
-                            <select id="formmodel-shipping_port_id" class="form-control select2-hidden-accessible is-invalid"
+                            <select id="formmodel-shipping_port_id" class="form-control select2-hidden-accessible"
                                 name="FormModel[shipping_port_id]" size="10" aria-required="true"
                                 data-s2-options="s2options_e9bc2761" data-krajee-select2="select2_b6264efc"
                                 style="width: 1px; height: 1px; visibility: hidden;"
@@ -187,7 +187,7 @@
     
                         <div class="form-group field-formmodel-volume required">
                             <label for="formmodel-volume">Объём (м³)</label>
-                            <input type="text" id="formmodel-volume" class="form-control is-invalid" name="FormModel[volume]"
+                            <input type="text" id="formmodel-volume" class="form-control" name="FormModel[volume]"
                                 placeholder="от 0.1 до 30" aria-required="true" data-plugin-inputmask="inputmask_0a332a33"
                                 style="text-align: left;">
                                 <div class="invalid-feedback">Необходимо заполнить «Объём (м³)».</div>
@@ -196,7 +196,7 @@
     
                         <div class="form-group field-formmodel-weight required">
                             <label for="formmodel-weight">Масса (кг)</label>
-                            <input type="text" id="formmodel-weight" class="form-control is-valid" name="FormModel[weight]"
+                            <input type="text" id="formmodel-weight" class="form-control" name="FormModel[weight]"
                                 placeholder="от 1 до 20000" aria-required="true" data-plugin-inputmask="inputmask_43e0c638"
                                 style="text-align: left;">
     
@@ -292,21 +292,20 @@
     <section class="info">
 <div id="about" class="scrl-anch"></div>
     <div class="wrapper">
-        <div class="row-f">
-        <div class="col">       
-        <div class="info__cap">Информация о компании </div>
+        <div class="row-f">      
+        <div class="cap cap--mb24">Информация о компании </div>
         <div class="info__text">
             <div class="info__text-block">ООО «ЛЕКО» осуществляет перевозки любых грузов, в том числе опасных, тяжеловесных и негабаритных. Приоритетными направлениями являются <b>международные перевозки контейнеров, сборных грузови внутрипортовое экспедирование в портах Дальнего Востока.</b></div>
             <div class="info__text-block">Основными преимуществами работы с нами, являются наличие в штате профессионалов, имеющих многолетний стаж работы в сфере перевозок и наличие профессионального образования в области транспорта, логистики и таможенных услуг . Компания имеет <b>надежных и проверенных партнеров в крупнейших городах России</b>, а также сеть агентов по территории Китая, позволяющих быстро и беспрепятственно связаться с вашим отправителеми организовать международную перевозку. Одной из главных целей компании является максимальное снижение цены товара за счет минимизации логистических издержек, возникающих в процессе транспортировки грузов. </div>
             <div class="info__text-block">Предоставление комплексной услуги по перевозке <b>«От двери до двери»</b>, прохождению таможенной очистки груза, а также <b>качественный и быстрый сервис, прозрачный документооборот</b> и своевременное информирование клиента на всех этапах перевозки груза – то, ради чего работает наша компания.</div>
         </div>
-        </div>
+        
         </div>
     </div>
 </section>
     <section class="work">
         <div class="wrapper">
-            <div class="work__cap">Как мы работаем</div>
+            <div class="cap cap--mb56">Как мы работаем</div>
             <div class="work__items">
                 <div class="work__item">
                     <div class="work__item-cap"><img src="img/img-calc.png"> <div class="work__item-cap-text">Считаете стоимость запроса</div></div>
@@ -331,12 +330,10 @@
     <section class="contacts">
     <div class="wrapper">
         <div class="row-f">
-            <div class="col">
-                <div class="contacts__cap">Наши контакты</div>
+                <div class="cap cap--mb24">Наши контакты</div>
                 <div class="contacts__line"><b>Наш офис находится по адресу:</b> г. Владивосток, ул. Светланская 123</div>
                 <div class="contacts__line"><b>Контактные телефоны:</b> +7 (423) 123 45 67, +7924 23 45 678</div>
                 <div class="contacts__line"><b>E-mail: </b><a href="mailto:info@leko-logistics.ru">info@leko-logistics.ru</a></div>
-            </div>
         </div>
     </div>
 </section>
@@ -345,10 +342,8 @@
 </div>
     <footer class="footer">
 	<div class="wrapper">
-		<!-- <div class="row-f"> -->
-				<div class="footer__lf"><a href="#">ОО «Леко» © 2019</a></div>
-				<div class="footer__rg"><a href="#">Политика конфиденциальности</a></div>
-		<!-- </div> -->
+		<div class="footer__item"><a href="#">ОО «Леко» © 2019</a></div>
+		<div class="footer__item"><a href="#">Политика конфиденциальности</a></div>
 	</div>
 </footer>
 

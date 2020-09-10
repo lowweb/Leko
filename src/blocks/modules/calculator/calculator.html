@@ -1,6 +1,6 @@
 <section class="calc">
     <div class="wrapper">
-        <div class="calc__cap">Калькулятор стоимости</div>
+        <div class="cap cap--mb56">Калькулятор стоимости</div>
         <div class="calc__body">
             <form id="FormModel" action="/site/calculate" method="post" enctype="multipart/form-data">
 
@@ -8,7 +8,7 @@
                     <div class="calc__form">
                         <div class="form-group field-formmodel-shipping_port_id required">
                             <label for="formmodel-shipping_port_id">Порт отгрузки</label>
-                            <select id="formmodel-shipping_port_id" class="form-control select2-hidden-accessible is-invalid"
+                            <select id="formmodel-shipping_port_id" class="form-control select2-hidden-accessible"
                                 name="FormModel[shipping_port_id]" size="10" aria-required="true"
                                 data-s2-options="s2options_e9bc2761" data-krajee-select2="select2_b6264efc"
                                 style="width: 1px; height: 1px; visibility: hidden;"
@@ -69,7 +69,7 @@
     
                         <div class="form-group field-formmodel-volume required">
                             <label for="formmodel-volume">Объём (м³)</label>
-                            <input type="text" id="formmodel-volume" class="form-control is-invalid" name="FormModel[volume]"
+                            <input type="text" id="formmodel-volume" class="form-control" name="FormModel[volume]"
                                 placeholder="от 0.1 до 30" aria-required="true" data-plugin-inputmask="inputmask_0a332a33"
                                 style="text-align: left;">
                                 <div class="invalid-feedback">Необходимо заполнить «Объём (м³)».</div>
@@ -78,7 +78,7 @@
     
                         <div class="form-group field-formmodel-weight required">
                             <label for="formmodel-weight">Масса (кг)</label>
-                            <input type="text" id="formmodel-weight" class="form-control is-valid" name="FormModel[weight]"
+                            <input type="text" id="formmodel-weight" class="form-control" name="FormModel[weight]"
                                 placeholder="от 1 до 20000" aria-required="true" data-plugin-inputmask="inputmask_43e0c638"
                                 style="text-align: left;">
     

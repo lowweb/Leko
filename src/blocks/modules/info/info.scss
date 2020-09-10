@@ -2,23 +2,27 @@
     background-color: #ffffff;
 
     &  .wrapper {
-        padding: 56px 50px 80px 50px;
+        padding: 56px 86px 80px 86px;
         @include fnt-roboto-c ($clr-dark-grey, 17px, 29px, normal);
+
+        @media only screen and (max-width: 768px) {
+            padding: 56px 24px 56px 24px;
+        }
+        @media only screen and (max-width: 420px) {
+            font-size: 16px;
+            line-height: 24px;
+            @media only screen and (max-width: 420px) {
+            padding: 40px 20px 40px 20px;
+            }
+        }
+        
     }
 
     & .row-f {
         justify-content: center;
-    }
-    & .col {
-        @include size (10.3);
+        flex-direction: column;
     }
 
-    &__cap {
-        @include fnt-roboto-c ($clr-dark-grey, 32px, 37px, bold);
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        margin-bottom: 24px;
-    }
     &__text-block {
         margin-bottom: 16px;
         &:last-child{
