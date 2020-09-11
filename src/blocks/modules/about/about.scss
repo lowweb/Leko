@@ -2,7 +2,7 @@
     background: url('../img/img-back.png');
     background-size: cover;
     background-position: center;
-    height: 480px;
+    height: 416px;
     position: relative;
 
     & > .wrapper {
@@ -18,9 +18,9 @@
     }
 
     &__cap {
-        @include fnt-roboto-c ($clr-white, 48px, 56px, bold);
-        margin-bottom: 16px;
-        width: 517px;
+        @include fnt-roboto-c ($clr-white, 40px, 47px, bold);
+        margin-bottom: 40px;
+        width: 629px;
         z-index: 3;
         @media only screen and (max-width: 550px) {
             font-size: 27px;

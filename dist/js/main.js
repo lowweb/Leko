@@ -94,7 +94,7 @@
 /***/ (function(module, exports) {
 
 document.getElementById("btn-scroll").onclick = function () {
-  document.getElementById('about').scrollIntoView({
+  document.getElementById('calcc').scrollIntoView({
     block: 'start',
     behavior: 'smooth'
   });

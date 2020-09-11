@@ -995,7 +995,7 @@ a {
   background: url("../img/img-back.png");
   background-size: cover;
   background-position: center;
-  height: 480px;
+  height: 416px;
   position: relative; }
   .about > .wrapper {
     display: flex;
@@ -1009,13 +1009,13 @@ a {
         justify-content: flex-start; } }
   .about__cap {
     font-family: 'Roboto Condensed', sans-serif;
-    line-height: 56px;
+    line-height: 47px;
     font-weight: bold;
-    font-size: 48px;
+    font-size: 40px;
     color: #ffffff;
     font-style: normal;
-    margin-bottom: 16px;
-    width: 517px;
+    margin-bottom: 40px;
+    width: 629px;
     z-index: 3; }
     @media only screen and (max-width: 550px) {
       .about__cap {
