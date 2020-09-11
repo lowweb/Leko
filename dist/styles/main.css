@@ -345,9 +345,11 @@ h1, h2, h3, h4, h5, h6, ul {
 
 .wrapper {
   max-width: 1128px;
-  margin: 0 auto;
-  padding-left: 24px;
-  padding-right: 24px; }
+  margin: 0 auto; }
+  @media only screen and (max-width: 1178px) {
+    .wrapper {
+      padding-left: 24px;
+      padding-right: 24px; } }
   @media only screen and (max-width: 768px) {
     .wrapper {
       padding-left: 24px;
@@ -565,7 +567,8 @@ a {
   background-color: #ECEDEE;
   display: flex;
   flex-direction: column;
-  height: fit-content; }
+  height: fit-content;
+  position: relative; }
   @media only screen and (max-width: 420px) {
     .calc__result {
       padding: 32px 20px 24px 20px; } }
@@ -583,7 +586,8 @@ a {
     font-weight: normal;
     font-size: 17px;
     color: #333333;
-    font-style: normal; }
+    font-style: normal;
+    width: 100%; }
     .calc__result--group tr {
       line-height: 40px; }
     .calc__result--group + .calc__result--group {
@@ -629,6 +633,26 @@ a {
     width: 28px; }
   .calc__result td:nth-child(2) {
     text-align: end; }
+  .calc__result--load:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #1D2228;
+    opacity: 0.4;
+    border-radius: 6px; }
+  .calc__result--load:after {
+    content: url("../img/loader.svg");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
 
 .calc__form {
   display: grid;
@@ -1089,7 +1113,10 @@ a {
 .work {
   background-color: #ECEDEE; }
   .work .wrapper {
-    padding: 56px 24px 64px 24px; }
+    padding: 56px 0px 64px 0px; }
+    @media only screen and (max-width: 1178px) {
+      .work .wrapper {
+        padding: 56px 24px 64px 24px; } }
     @media only screen and (max-width: 768px) {
       .work .wrapper {
         padding: 56px 24px; } }
@@ -1228,24 +1255,32 @@ a {
 .contract {
   padding: 40px 0 128px 0;
   background-color: #ffffff; }
+  @media only screen and (max-width: 768px) {
+    .contract .wrapper {
+      padding-left: 0px;
+      padding-right: 0px; } }
+  @media only screen and (max-width: 768px) {
+    .contract .row-f {
+      flex-direction: column; } }
   .contract__menu {
-    box-sizing: border-box;
-    word-wrap: break-word;
-    margin-left: 12px;
-    margin-right: 12px;
-    width: calc(25% - 24px); }
+    flex: 1 0 264px;
+    margin-right: 24px; }
+    @media only screen and (max-width: 768px) {
+      .contract__menu {
+        flex: 1;
+        margin-bottom: 40px;
+        margin-right: 0; } }
   .contract__text {
-    box-sizing: border-box;
-    word-wrap: break-word;
-    margin-left: 12px;
-    margin-right: 12px;
-    width: calc(75% - 24px);
     font-family: 'Roboto', sans-serif;
     line-height: 24px;
     font-weight: normal;
     font-size: 15px;
     color: #333333;
     font-style: normal; }
+    @media only screen and (max-width: 768px) {
+      .contract__text {
+        padding-left: 24px;
+        padding-right: 24px; } }
     .contract__text-cap {
       font-family: 'Roboto Condensed', sans-serif;
       line-height: 37px;
@@ -1258,15 +1293,30 @@ a {
 .contract-menu__items {
   display: flex;
   flex-direction: column; }
+  @media only screen and (max-width: 768px) {
+    .contract-menu__items {
+      flex-direction: row;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      padding-left: 24px; } }
 
 .contract-menu__item {
   padding: 8px 14px 8px 16px;
   background-color: transparent;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  order: 1; }
+  @media only screen and (max-width: 768px) {
+    .contract-menu__item {
+      flex: 1 0 264px;
+      margin-right: 24px; } }
   .contract-menu__item--active {
     background-color: #ECEDEE;
     border-left: 2px solid #DE1832; }
+    @media only screen and (max-width: 768px) {
+      .contract-menu__item--active {
+        order: 0; } }
     .contract-menu__item--active .contract-menu__cap {
       color: #333333;
       border-bottom: none;

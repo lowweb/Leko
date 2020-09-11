@@ -14,9 +14,12 @@ h1, h2, h3, h4, h5, h6, ul {
 	// @include wrapper ();
 	max-width: 1128px;
     margin: 0 auto;
-    padding-left: 24px;
-	padding-right: 24px;
-	
+    // padding-left: 24px;
+	// padding-right: 24px;
+	@media only screen and (max-width: 1178px) {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
 	@media only screen and (max-width: 768px) {
 		padding-left: 24px;
 		padding-right: 24px;

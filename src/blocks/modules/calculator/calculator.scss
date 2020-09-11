@@ -3,6 +3,7 @@
 
     & .wrapper {
         padding: 56px 86px 0 86px;
+
         @media only screen and (max-width: 768px) {
             padding: 56px 24px 0 24px;
         }
@@ -58,6 +59,7 @@
         display: flex;
         flex-direction: column;
         height: fit-content;
+        position: relative;
 
         
          @media only screen and (max-width: 420px) {
@@ -71,6 +73,7 @@
 
         &--group {
             @include fnt-roboto ($clr-dark-grey, 17px, 24px, normal);
+            width: 100%;
 
             & tr {
                 line-height: 40px;
@@ -113,6 +116,31 @@
         }
         td:nth-child(2) {
             text-align: end;
+        }
+
+        &--load:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: #1D2228;
+            opacity: 0.4;
+            border-radius: 6px;
+            
+        }
+        &--load:after {
+            content: url('../img/loader.svg');
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
         }
     }
      &__form {
