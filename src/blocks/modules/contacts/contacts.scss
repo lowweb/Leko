@@ -1,7 +1,8 @@
 .contacts {
 
     & .wrapper {
-        padding: 80px 86px 56px 86px;
+        padding: 80px 96px 56px 96px;
+        flex-direction: column;
         @media only screen and (max-width: 768px) {
             padding: 56px 24px;
         }

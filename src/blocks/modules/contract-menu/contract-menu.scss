@@ -2,6 +2,13 @@
     &__items {
         display: flex;
         flex-direction: column;
+        @media only screen and (max-width: 768px) {
+            flex-direction: row;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            padding-left: 24px;
+        }
     }
 
     &__item {
@@ -9,10 +16,19 @@
         background-color: transparent;
         display: flex;
         flex-direction: column;
+        order: 1;
 
+        @media only screen and (max-width: 768px) {
+            flex: 1 0 264px;
+            margin-right: 24px;
+        } 
         &--active {
             background-color: #ECEDEE; 
             border-left: 2px solid $clr-red;
+            
+            @media only screen and (max-width: 768px) {
+                order: 0;
+            } 
 
             & .contract-menu__cap {
                 color: #333333;

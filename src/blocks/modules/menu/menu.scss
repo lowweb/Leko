@@ -1,20 +1,28 @@
+$hamVisibleWidth: 1128px;
 .menu {
     // height: 56px;
     background-color: $clr-menu;
     position: relative;
-    & .row-f {
-        align-items: center;
-
-    }
     & .wrapper {
-        @media only screen and (max-width: 805px) {
+        padding-right: 0px;
+        padding-left: 0px;
+        align-items: center;
+        @media only screen and (max-width: $hamVisibleWidth) {
+                padding-right: 24px;
+                padding-left: 24px;
+            }
+    }
+  
+    
+    & .wrapper {
+        @media only screen and (max-width: $hamVisibleWidth) {
             position: relative;
         }
     }
     &__nav {
         display: flex;
         flex: 1;
-        @media only screen and (max-width: 805px) {
+        @media only screen and (max-width: $hamVisibleWidth) {
             display: none;
         }
         &--opn {
@@ -35,11 +43,9 @@
     &__items {
         display: flex;
         flex: 1;
+        justify-content: center;
 
-        & li:nth-child(4n) {
-            margin-left: auto;
-        }
-        @media only screen and (max-width: 805px) {
+        @media only screen and (max-width: $hamVisibleWidth) {
             flex-direction: column;
             width: 100%;
 
@@ -54,17 +60,18 @@
             content: url('../img/icn-enter.png'); 
         }
     }
+   
     & ul > li > a{
         @include fnt-roboto-c ($clr-white, 18px, 24px, normal);
         height: 100%;
         display: flex;
         align-items: center;
-        padding: 16px 32px;
+        padding: 16px 24px;
         cursor: pointer;
         &:hover {
             background-color: $clr-menu--h;
         }
-        @media only screen and (max-width: 805px) {
+        @media only screen and (max-width: $hamVisibleWidth) {
             padding: 12px 20px;
             font-size: 24px;
         }
@@ -72,7 +79,7 @@
     }
 
     & .ham {
-        @media only screen and (max-width: 805px) {
+        @media only screen and (max-width: $hamVisibleWidth) {
             display: flex;
             align-self: center;
             padding: 16px 0;
@@ -80,7 +87,7 @@
     }
     & .hd__contact-mail,& .hd__contact-tel {
         display: none;
-        @media only screen and (max-width: 805px) {
+        @media only screen and (max-width: $hamVisibleWidth) {
             display: flex;
         }
 
