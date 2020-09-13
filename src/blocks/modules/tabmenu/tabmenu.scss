@@ -6,6 +6,10 @@
     position: relative;
     padding-top: 24px;
 
+    & .wrapper {
+        flex-direction: column;
+    }
+
     &__cap {
         @include fnt-roboto-c ($clr-white, 32px, 36px, bold);
         letter-spacing: 0.06em;

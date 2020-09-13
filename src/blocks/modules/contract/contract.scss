@@ -2,17 +2,14 @@
     padding: 40px 0 128px 0;
     background-color: $clr-white;
     & .wrapper {
+        
         @media only screen and (max-width: 768px) {
             padding-left: 0px;
             padding-right: 0px;
-        }
-    }
-    
-    & .row-f {
-        @media only screen and (max-width: 768px) {
             flex-direction: column;
         }
     }
+    
     &__menu {
        flex: 1 0 264px;
        margin-right: 24px;

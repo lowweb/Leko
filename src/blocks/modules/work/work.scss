@@ -1,15 +1,11 @@
 .work {
     background-color: #ECEDEE;
     & .wrapper {
-<<<<<<< HEAD
-        padding: 56px 24px 64px 24px;
+        // padding: 56px 24px 64px 24px;
+        padding-top: 56px;
+        padding-bottom: 24px;
         flex-direction: column;
-=======
-        padding: 56px 0px 64px 0px;
-        @media only screen and (max-width: 1178px) {
-            padding: 56px 24px 64px 24px;
-        }
->>>>>>> aecebdcb71fc228c991b9a89c5558c90f7f99efb
+
         @media only screen and (max-width: 768px) {
             padding: 56px 24px;
         }
@@ -25,30 +21,44 @@
         margin-bottom: 56px;
     }
     &__items {
-       display: grid;
-       grid-template-columns: repeat(auto-fit, 264px);
-       grid-gap: 24px;
-       @media only screen and (max-width: 1115px) {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            grid-gap: 40px;
+        display: flex;
+        @media only screen and (max-width: 1178px){
+            flex-wrap: wrap;
+            
         }
-        @media only screen and (max-width: 420px) {
-            grid-template-columns: 1fr;
-            grid-gap: 40px;
-        }
+        
+    //    display: grid;
+    //    grid-template-columns: repeat(auto-fit, minmax(264px,340px));
+        grid-gap: 40px;
+    //    @media only screen and (max-width: 1115px) {
+    //         grid-template-columns: repeat(2, 1fr);
+    //         grid-template-rows: repeat(2, 1fr);
+    //         grid-gap: 40px;
+    //     }
+    //     @media only screen and (max-width: 420px) {
+    //         grid-template-columns: 1fr;
+    //         grid-gap: 40px;
+    //     }
     }
 
     &__item {
      
         display: flex;
         flex-direction: column;
+        margin: 0 auto;
+        min-width: 264px;
+        max-width: 340px;
+        
+        @media only screen and (max-width: 420px){
+            margin: 0;
+            
+        }
 
         &-cap {
             @include fnt-roboto-c ($clr-blck, 20px, 23px, normal);
             display: flex;
             align-items: flex-end;
-            margin-bottom: 8px;
+            margin-bottom: 11px;
             &-text{
                 margin-left: 16px;
                 max-width: 192px;

@@ -344,7 +344,6 @@ h1, h2, h3, h4, h5, h6, ul {
         background: rgba(0, 0, 0, 0.4); }
 
 .wrapper {
-<<<<<<< HEAD
   display: flex;
   max-width: 1176px;
   margin: 0 auto;
@@ -354,15 +353,6 @@ h1, h2, h3, h4, h5, h6, ul {
     .wrapper {
       max-width: 1128px; } }
   @media only screen and (max-width: 420px) {
-=======
-  max-width: 1128px;
-  margin: 0 auto; }
-  @media only screen and (max-width: 1178px) {
-    .wrapper {
-      padding-left: 24px;
-      padding-right: 24px; } }
-  @media only screen and (max-width: 768px) {
->>>>>>> aecebdcb71fc228c991b9a89c5558c90f7f99efb
     .wrapper {
       padding-left: 20px;
       padding-right: 20px; } }
@@ -1137,15 +1127,9 @@ a {
 .work {
   background-color: #ECEDEE; }
   .work .wrapper {
-<<<<<<< HEAD
-    padding: 56px 24px 64px 24px;
+    padding-top: 56px;
+    padding-bottom: 24px;
     flex-direction: column; }
-=======
-    padding: 56px 0px 64px 0px; }
-    @media only screen and (max-width: 1178px) {
-      .work .wrapper {
-        padding: 56px 24px 64px 24px; } }
->>>>>>> aecebdcb71fc228c991b9a89c5558c90f7f99efb
     @media only screen and (max-width: 768px) {
       .work .wrapper {
         padding: 56px 24px; } }
@@ -1163,21 +1147,20 @@ a {
     text-transform: uppercase;
     margin-bottom: 56px; }
   .work__items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 264px);
-    grid-gap: 24px; }
-    @media only screen and (max-width: 1115px) {
+    display: flex;
+    grid-gap: 40px; }
+    @media only screen and (max-width: 1178px) {
       .work__items {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-gap: 40px; } }
-    @media only screen and (max-width: 420px) {
-      .work__items {
-        grid-template-columns: 1fr;
-        grid-gap: 40px; } }
+        flex-wrap: wrap; } }
   .work__item {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    margin: 0 auto;
+    min-width: 264px;
+    max-width: 340px; }
+    @media only screen and (max-width: 420px) {
+      .work__item {
+        margin: 0; } }
     .work__item-cap {
       font-family: 'Roboto Condensed', sans-serif;
       line-height: 23px;
@@ -1187,7 +1170,7 @@ a {
       font-style: normal;
       display: flex;
       align-items: flex-end;
-      margin-bottom: 8px; }
+      margin-bottom: 11px; }
       .work__item-cap-text {
         margin-left: 16px;
         max-width: 192px; }
@@ -1246,6 +1229,8 @@ a {
   height: 124px;
   position: relative;
   padding-top: 24px; }
+  .tabmenu .wrapper {
+    flex-direction: column; }
   .tabmenu__cap {
     font-family: 'Roboto Condensed', sans-serif;
     line-height: 36px;
@@ -1288,9 +1273,7 @@ a {
   @media only screen and (max-width: 768px) {
     .contract .wrapper {
       padding-left: 0px;
-      padding-right: 0px; } }
-  @media only screen and (max-width: 768px) {
-    .contract .row-f {
+      padding-right: 0px;
       flex-direction: column; } }
   .contract__menu {
     flex: 1 0 264px;

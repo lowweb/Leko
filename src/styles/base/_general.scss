@@ -15,7 +15,8 @@ h1, h2, h3, h4, h5, h6, ul {
 	display: flex;
 	max-width: 1176px;
     margin: 0 auto;
-<<<<<<< HEAD
+
+	
     padding-left: 24px;
 	padding-right: 24px;
 	
@@ -25,17 +26,8 @@ h1, h2, h3, h4, h5, h6, ul {
 	@media only screen and (max-width: 420px) {
 		padding-left: 20px;
 		padding-right: 20px;
-=======
-    // padding-left: 24px;
-	// padding-right: 24px;
-	@media only screen and (max-width: 1178px) {
-		padding-left: 24px;
-		padding-right: 24px;
-	}
-	@media only screen and (max-width: 768px) {
-		padding-left: 24px;
-		padding-right: 24px;
->>>>>>> aecebdcb71fc228c991b9a89c5558c90f7f99efb
+
+		
 	}
 
 }
