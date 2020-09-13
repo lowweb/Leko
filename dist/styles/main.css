@@ -1148,16 +1148,14 @@ a {
     margin-bottom: 56px; }
   .work__items {
     display: flex;
-    grid-gap: 40px; }
-    @media only screen and (max-width: 1178px) {
+    grid-gap: 24px; }
+    @media only screen and (max-width: 768px) {
       .work__items {
-        flex-wrap: wrap; } }
+        flex-direction: column; } }
   .work__item {
+    flex: 1 1 auto;
     display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    min-width: 264px;
-    max-width: 340px; }
+    flex-direction: column; }
     @media only screen and (max-width: 420px) {
       .work__item {
         margin: 0; } }
