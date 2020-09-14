@@ -61,15 +61,19 @@ input {
 	border-width: 0px;
 }
 body {
-	// height: 100%;
-	// overflow: hidden;
+	
 }
 
-
+.page__body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
 
 .main-content {
 	display: flex;
 	flex-direction: column;
+	flex: 1 1 100%;
 }
 
 a {
